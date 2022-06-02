@@ -1,0 +1,13 @@
+@import 'global/fonts';
+@import 'global/reset';
+@import 'global/libs';
+@import 'global/vars';
+@import 'global/mixins';
+@import 'global/main';
+
+@import 'components/parts/common';
+@import 'components/parts/menu';
+@import 'components/parts/section';
+
+@import 'components/header';
+@import 'components/footer';
