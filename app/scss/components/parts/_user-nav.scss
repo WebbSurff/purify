@@ -1,0 +1,116 @@
+.user-nav {
+    display: flex;
+    margin-left: auto;
+
+    &__item {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        @include m($md) {
+            align-self: flex-end;
+        }
+
+        &:not(:last-child) {
+            margin-right: 30px;
+
+            @include m($sm) {
+                margin-right: 15px;
+            }
+        }
+    }
+
+    &__btn {
+        position: relative;
+        display: inherit;
+
+        svg {
+            transition: fill 0.3s;
+        }
+
+        &--basket {
+            padding-top: 10px;
+
+            svg {
+                fill: $mainColor;
+            }
+        }
+
+        &--likes {
+            padding-right: 30px;
+            padding-top: 10px;
+
+            @include m($sm) {
+                padding: 0;
+
+                span {
+                    font-size: 0;
+                    width: 0;
+                }
+            }
+
+            svg {
+                fill: #F34141;
+            }
+        }
+
+        &:hover {
+            svg {
+                fill: $blue-900;
+            }
+        }
+
+        &--popup {
+            padding: 14px 27px 14px 28px;
+
+            svg {
+                display: none;
+
+                @include m($md) {
+                    display: block;
+                    fill: #fff;
+                }
+            }
+
+            @include m($lg) {
+                padding: 15px 17px;
+                font-weight: 400;
+            }
+
+            @include m($md) {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                font-size: 0;
+                padding: 15px 17px;
+            }
+        }
+
+
+    }
+
+    &__qty {
+        position: absolute;
+        font-size: 12px;
+        line-height: 1;
+        color: $black-900;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #E5E5E7;
+        top: 0;
+        right: 0;
+        border-radius: 50%;
+    }
+
+    &__sum {
+        margin-left: 10px;
+        font-size: 12px;
+        line-height: 1;
+        align-self: flex-end;
+    }
+
+
+}

@@ -49,10 +49,10 @@ function styles() {
 
 function scripts() {
     return src([
-            'node_modules/jquery/dist/jquery.js',
-
-            'app/js/main.js'
-        ])
+        'node_modules/jquery/dist/jquery.js',
+        'node_modules/jquery.nice-number/dist/jquery.nice-number.js',
+        'app/js/main.js'
+    ])
         .pipe(concat('main.min.js'))
         .pipe(uglify())
         .pipe(dest('app/js'))
@@ -74,11 +74,11 @@ function images() {
             }),
             imagemin.svgo({
                 plugins: [{
-                        removeViewBox: true
-                    },
-                    {
-                        cleanupIDs: false
-                    }
+                    removeViewBox: true
+                },
+                {
+                    cleanupIDs: false
+                }
                 ]
             })
         ]))
@@ -123,12 +123,12 @@ function htmlInclude() {
 
 function build() {
     return src([
-            'app/**/*.html',
-            'app/css/*.min.css',
-            'app/js/main.min.js'
-        ], {
-            base: 'app'
-        })
+        'app/**/*.html',
+        'app/css/*.min.css',
+        'app/js/main.min.js'
+    ], {
+        base: 'app'
+    })
         .pipe(dest('dist'))
 }
 

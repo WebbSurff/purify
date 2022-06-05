@@ -1,3 +1,281 @@
 <header class="header">
+    <div class="header__top">
+        <div class="container">
+            <div class="header__info">
+                <div class="header__date-wrap">
+                    <a class="header__date int" href="#">
+                        <svg width="16" height="16">
+                            <use xlink:href="images/sprite.svg#local"></use>
+                        </svg>
+                        <span>
+                            Минск
+                        </span>
+                    </a>
+                </div>
+                <a class="header__date int" href="tel:11234568899">
+                    <svg width="16" height="16">
+                        <use xlink:href="images/sprite.svg#phone"></use>
+                    </svg>
+                    <span>
+                        +1 123 456 88 99
+                    </span>
+                </a>
+                <span class="header__date header__date--timetable">
+                    Пн-Вс с 10.00 до 18.00
+                </span>
+                <a class="header__date header__date--mail int" href="mailto:purify@gmail.com">
+                    <svg width="18" height="16">
+                        <use xlink:href="images/sprite.svg#mail"></use>
+                    </svg>
+                    <span>
+                        purify@gmail.com
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="header__bot">
+        <div class="container">
+            <nav class="header__nav">
+                <a class="header__logo int" href="#">
+                    <img class="header__logo-img" src="images/header/logo.svg" alt="logo" width="98" height="28">
+                </a>
+                <div class="header__menu menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link int" href="#">
+                                Каталог
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link int" href="#">
+                                Доставка
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link int" href="#">
+                                ОПТ
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link int" href="#">
+                                Контакты
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link int" href="#">
+                                Что защищает?
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="header__user user-nav">
+                    <li class="user-nav__item">
+                        <button class="user-nav__btn user-nav__btn--basket int" type="button">
+                            <span class="sr-only">
+                                открыть корзину
+                            </span>
+                            <svg width="24" height="24">
+                                <use xlink:href="images/sprite.svg#basket"></use>
+                            </svg>
+                            <span class="user-nav__qty">
+                                2
+                            </span>
+                            <span class="user-nav__sum">
+                                20 <span class="currency">$</span>
+                            </span>
+                        </button>
+                    </li>
+                    <li class="user-nav__item">
+                        <button class="user-nav__btn user-nav__btn--likes int" type="button">
+                            <span class="sr-only">
+                                открыть понравившееся товары
+                            </span>
+                            <svg width="24" height="24">
+                                <use xlink:href="images/sprite.svg#likes"></use>
+                            </svg>
+                            <span class="user-nav__qty">
+                                3
+                            </span>
+                        </button>
+                    </li>
+                    <li class="user-nav__item">
+                        <button class="user-nav__btn user-nav__btn--popup btn int" type="button">
+                            Заказать звонок
+                            <svg class="animate__animated  animate__pulse animate__infinite" width="20" height="20">
+                                <use xlink:href="images/sprite.svg#phone"></use>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+                <button class="header__burger" type="button">
+                    <span class="header__burger-line"></span>
+                    <span class="sr-only">
+                        открыть мобильное меню
+                    </span>
+                </button>
+            </nav>
+        </div>
+    </div>
 
+    <div class="header__basket basket-header">
+        <div class="basket-header__wrapper">
+            <div class="basket-header__top">
+                <div class="basket-header__top-wrap">
+                    <p class="basket-header__title">
+                        Корзина
+                    </p>
+                    <button class="basket-header__clear int" type="button">
+                        очистить корзину
+                    </button>
+                </div>
+                <button class="basket-header__close" type="button">
+                    <span class="sr-only">
+                        закрыть корзину
+                    </span>
+                    <svg width="24" height="24">
+                        <use xlink:href="images/sprite.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="basket-header__body">
+                <ul class="basket-header__list basket-product">
+                    <li class="basket-product__item ">
+                        <button class="basket-product__delete">
+                            <svg width="12" height="12">
+                                <use xlink:href="images/sprite.svg#close"></use>
+                            </svg>
+                            <span class="sr-only">
+                                удалить товар из корзины
+                            </span>
+                        </button>
+                        <a class="basket-product__img int" href="#">
+                            <img src="images/basket-product/1.jpg" alt="защитная маска" width="60" height="60">
+                        </a>
+                        <div class="basket-product__info">
+                            <a class="basket-product__name int" href="#">
+                                Респиратор (маска) KN95 FFP2
+                            </a>
+                            <span class="basket-product__price">
+                                10<span class="currensy">$</span>
+                            </span>
+                        </div>
+
+                        <label class="sr-only" for="enter-number">
+                            Выберите количество товаров
+                        </label>
+                        <input class="basket-product__input" type="number" value="1" min="1" name="number-products"
+                            id="enter-number" style="width:100%;" />
+
+                        <span class="basket-product__price">
+                            10<span class="currensy">$</span>
+                        </span>
+                    </li>
+                    <li class="basket-product__item ">
+                        <button class="basket-product__delete">
+                            <svg width="12" height="12">
+                                <use xlink:href="images/sprite.svg#close"></use>
+                            </svg>
+                            <span class="sr-only">
+                                удалить товар из корзины
+                            </span>
+                        </button>
+                        <a class="basket-product__img int" href="#">
+                            <img src="images/basket-product/2.jpg" alt="Антисептический гель Septel" width="60"
+                                height="60">
+                        </a>
+                        <div class="basket-product__info">
+                            <a class="basket-product__name int" href="#">
+                                Антисептический гель Septel
+                                (50 мл.)
+                            </a>
+                            <span class="basket-product__price">
+                                12<span class="currensy">$</span>
+                            </span>
+                        </div>
+                        <label class="sr-only" for="enter-number">
+                            Выберите количество товаров
+                        </label>
+                        <input class="basket-product__input" type="number" value="1" min="1" name="number-products"
+                            id="enter-number" style="width:100%;" />
+
+                        <span class="basket-product__price">
+                            12<span class="currensy">$</span>
+                        </span>
+                    </li>
+                    <li class="basket-product__item ">
+                        <button class="basket-product__delete">
+                            <svg width="12" height="12">
+                                <use xlink:href="images/sprite.svg#close"></use>
+                            </svg>
+                            <span class="sr-only">
+                                удалить товар из корзины
+                            </span>
+                        </button>
+                        <a class="basket-product__img int" href="#">
+                            <img src="images/basket-product/3.jpg" alt="Респиратор детский" width="60" height="60">
+                        </a>
+                        <div class="basket-product__info">
+                            <a class="basket-product__name int" href="#">
+                                Респиратор детский KN95 FFP2 Кitten blue
+                            </a>
+                            <span class="basket-product__price">
+                                8<span class="currensy">$</span>
+                            </span>
+                        </div>
+                        <label class="sr-only" for="enter-number">
+                            Выберите количество товаров
+                        </label>
+                        <input class="basket-product__input" type="number" value="1" min="1" name="number-products"
+                            id="enter-number" style="width:100%;" />
+
+                        <span class="basket-product__price">
+                            8<span class="currensy">$</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="basket-header__bottom">
+                <div class="basket-header__bottom-wrap">
+                    <p class="basket-header__text">
+                        Товаров на сумму
+                    </p>
+                    <span class="basket-header__sum">
+                        20<span class="currensy">$</span>
+                    </span>
+                </div>
+                <button class="basket-header__order btn" type="button">
+                    Оформить заказ
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup section">
+        <div class="popup__wrap">
+            <button class="popup__close" type="button">
+                <span class="sr-only">закрыть форму</span>
+                <svg width="18" height="18">
+                    <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <form class="popup__form form-contact" action="#">
+                <h2 class="form-contact__title section__title">
+                    Закажите звонок
+                </h2>
+                <span class="form-contact__subtitle">
+                    Прямо сейчас
+                </span>
+                <label class="sr-only" for="name">ваше имя</label>
+                <input class="form-contact__input form-contact__input--name int" type="text" id="name" name="enter-name"
+                    placeholder="Ваше имя">
+                <label class="sr-only" for="phone">ваш телефон</label>
+                <input class="form-contact__input form-contact__input--phone int" type="tel" id="phone"
+                    name="enter-phone" placeholder="Ваш телефон">
+                <button class="form-contact__btn btn int" type="submit">
+                    Заказать
+                </button>
+            </form>
+        </div>
+    </div>
 </header>

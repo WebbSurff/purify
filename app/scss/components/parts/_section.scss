@@ -1,0 +1,28 @@
+.section {
+    margin-bottom: 70px;
+
+    &__box {
+        text-align: center;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 34px;
+        text-transform: capitalize;
+        line-height: 1.4;
+        display: inline-block;
+        position: relative;
+        color: $black-100;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(89, 120, 169, 0.3);
+            height: 9px;
+            width: 100%;
+        }
+    }
+}

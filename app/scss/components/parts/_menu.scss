@@ -1,0 +1,90 @@
+.menu {
+    @include m($lg) {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 5;
+        top: 0;
+        background-color: #fff;
+        padding: 50px;
+        transform: translateY(-100%);
+        transition: transform 0.3s;
+    }
+
+    &.active {
+        transform: translateY(0);
+        transition: transform 0.3s;
+    }
+
+    &__list {
+        display: flex;
+
+        @include m($lg) {
+            text-align: center;
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+    &__item {
+        padding: 20px 0;
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: 40px;
+
+            @include m($xl) {
+                margin-right: 20px;
+            }
+
+            @include m($lg) {
+                margin-right: 0;
+                padding: 0;
+            }
+        }
+
+
+    }
+
+    &__link {
+        font-weight: 500;
+        line-height: 1;
+        white-space: nowrap;
+
+        @include m($lg) {
+            font-size: 24px;
+            display: block;
+            padding: 20px 0;
+            width: 100%;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -1px;
+            left: 0;
+            background-color: $mainColor;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        &:hover {
+            &::after {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}

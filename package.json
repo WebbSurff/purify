@@ -24,5 +24,11 @@
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.6.0",
     "sass": "^1.49.0"
+  },
+  "dependencies": {
+    "@ohepworthbell/quantityinput": "^0.2.0",
+    "animate.css": "^4.1.1",
+    "jquery.nice-number": "^2.1.0",
+    "numscrubberjs": "^1.0.2"
   }
 }

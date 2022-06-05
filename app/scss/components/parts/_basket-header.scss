@@ -1,0 +1,263 @@
+.basket-header {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateX(100%);
+    z-index: 15;
+    visibility: hidden;
+    transition: transform 0.4s, visibility 0.3s;
+
+    &.active {
+        visibility: visible;
+        transform: translate(0);
+        transition: transform 0.4s, visibility 0.3s;
+    }
+
+    &__wrapper {
+        position: fixed;
+        z-index: 10;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 63%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+
+        @include m($xl) {
+            left: 50%;
+        }
+
+        @include m($lg) {
+            left: 20%;
+        }
+
+        @include hl {
+            left: 0;
+        }
+
+        @include m($md) {
+            left: 0;
+        }
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 19px 26px 11px 24px;
+
+        @include hl {
+            padding: 10px;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        letter-spacing: 0.03em;
+        line-height: 1.2;
+        margin-bottom: 12px;
+        color: $black-100;
+    }
+
+    &__clear {
+        letter-spacing: 0.03em;
+
+        &:hover {
+            color: $mainColor;
+        }
+    }
+
+    &__close {
+        svg {
+            fill: #31352B;
+            transition: fill 0.3s;
+        }
+
+        &:hover {
+            svg {
+                fill: $mainColor;
+            }
+        }
+    }
+
+    &__body {
+        padding: 13px 12px 13px 11px;
+        background-color: #F6F6F6;
+        height: 100%;
+        overflow: auto;
+    }
+
+    &__bottom-wrap {
+        padding: 21px 23px 26px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include hl {
+            padding: 10px;
+        }
+    }
+
+    &__sum,
+    &__text {
+        font-size: 24px;
+        letter-spacing: 0.03em;
+        font-size: 24px;
+        line-height: 1.2;
+        color: $black-200;
+    }
+
+    &__sum {
+        font-weight: 600;
+        line-height: 1;
+        color: $gray-100;
+
+        span {
+            font-weight: 400;
+            font-size: 21px;
+        }
+    }
+
+    &__order {
+        border-radius: 0;
+        width: 100%;
+    }
+
+}
+
+
+.basket-product {
+
+    &__item {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        padding: 12px;
+        position: relative;
+        border: 1px solid #C1C1C1;
+        border-radius: 3px;
+
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+
+        &.remove {
+            display: none;
+        }
+    }
+
+    &__delete {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+
+        svg {
+            @include m($lg) {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+
+    &__img {
+        flex: 0 0 60px;
+        margin-right: 32px;
+
+        img {
+            object-fit: cover;
+        }
+
+        @include m($sm) {
+            width: 40px;
+            height: 40px;
+            flex: 0 0 40px;
+            margin-right: 15px;
+        }
+    }
+
+    &__info {
+        max-width: 150px;
+        margin-right: auto;
+
+        @include m($sm) {
+            max-width: 100px;
+        }
+    }
+
+    &__name {
+        font-weight: 600;
+        margin-bottom: 5px;
+        letter-spacing: 0.03em;
+        line-height: 1.4;
+        display: block;
+        color: $black-200;
+
+        @include m($md) {
+            font-size: 12px;
+            letter-spacing: 0;
+            font-weight: 400;
+        }
+    }
+
+    &__price {
+        align-self: flex-end;
+        font-weight: 600;
+        line-height: 1;
+        color: $gray-100;
+        font-size: 18px;
+        letter-spacing: 0.03em;
+        flex: 0 0 28px;
+
+        span {
+            font-weight: 400;
+            font-size: 16px;
+        }
+    }
+
+
+    .nice-number {
+        align-self: flex-end;
+        position: relative;
+        flex: 0 0 82px;
+        height: 24px;
+        margin-right: 12px;
+        display: flex;
+
+        input+button {
+            right: 0;
+        }
+
+        input {
+            height: 22px;
+            text-align: center;
+            background-color: #dbe9ff;
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 24px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            background-color: #67a2ff59;
+            z-index: 5;
+            border-radius: 0;
+            font-size: 24px;
+            color: #fff;
+            transition: outline 0.3s;
+
+            &:focus {
+                outline: 2px solid $mainColor;
+                outline-offset: 1px;
+            }
+        }
+    }
+}

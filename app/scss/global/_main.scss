@@ -1,7 +1,32 @@
-body {}
+body {
+    font-family: 'Montserrat', Tahoma;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.6;
+    color: $gray-100;
+    font-style: normal;
+}
+
+.lock {
+    overflow: hidden;
+
+    &::after,
+    &::before {
+        content: '';
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9;
+    }
+}
 
 .container {
     margin: 0 auto;
+    max-width: 1145px;
+    padding: 0 15px;
 }
 
 .wrapper {
