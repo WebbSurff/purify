@@ -1,0 +1,20 @@
+.call-back {
+    padding: 63px 0 63px 95px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include m($md) {
+        padding: 40px;
+    }
+
+    @include m($sm) {
+        padding: 20px 0;
+    }
+
+    &__form {
+        max-width: 350px;
+        margin: 0;
+        z-index: 0;
+    }
+}

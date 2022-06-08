@@ -104,3 +104,38 @@ a {
         transition: transform 0.3s;
     }
 }
+
+.numbered-item {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: #f9faff;
+    border-radius: 0px 40px;
+
+    &::before {
+        content: '0'counter(item);
+        counter-increment: item;
+        position: absolute;
+        top: -22px;
+        left: 0;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1.2;
+        color: $blue-100;
+    }
+
+    &:not(:last-child) {
+
+        &::after {
+            content: '';
+            position: absolute;
+            height: 4px;
+            width: 30px;
+            background-color: $blue-100;
+            transform: translateY(100%);
+            right: -30px;
+            top: 50%;
+        }
+
+    }
+}

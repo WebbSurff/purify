@@ -2,12 +2,17 @@ $(function () {
     $('input[type="number"]').niceNumber({
         autoSize: false
     });
-
-    const da = new DynamicAdapt("max");
-    da.init();
+    let containerDynamic = document.querySelector("max");
+    let da;
+    if (containerDynamic) da = new DynamicAdapt(containerDynamic);
 });
 
-var mixer = mixitup('.product-catalog', {
+
+
+let containerEl = document.querySelector('.product-catalog');
+let mixer;
+
+if (containerEl) mixer = mixitup(containerEl, {
     "animation": {
         "duration": 483,
         "nudge": true,
@@ -15,6 +20,7 @@ var mixer = mixitup('.product-catalog', {
         "effects": "fade translateZ(37px) rotateX(72deg) stagger(30ms)"
     }
 });
+
 
 if (window.innerWidth <= 1200) {
     const swiperCatalog = new Swiper('.catalog__wrap-btn ', {
@@ -68,21 +74,23 @@ const lock = document.querySelector('.lock');
 const body = document.querySelector('body');
 
 const callBack = document.querySelector('.user-nav__btn--popup');
-const popup = document.querySelector('.popup');
+const popup = document.querySelector('.popup--open');
 const closePopup = document.querySelector('.popup__close');
-
 
 callBack.addEventListener("click", function (e) {
     popup.classList.toggle('active');
-    document.addEventListener('click', function (e) {
-        if (e.target === popup && e.target !== callBack) {
-            popup.classList.remove('active');
-        }
-    });
-    closePopup.addEventListener('click', function (e) {
-        popup.classList.remove('active')
-    });
 });
+
+document.addEventListener('click', function (e) {
+    if (e.target === popup && e.target !== callBack) {
+        popup.classList.remove('active');
+    }
+});
+closePopup.addEventListener('click', function (e) {
+    popup.classList.remove('active')
+});
+
+
 
 const clearBusket = document.querySelector('.basket-header__clear');
 const basketItem = document.querySelectorAll('.basket-product__item');

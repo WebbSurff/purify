@@ -1,0 +1,91 @@
+@@include('../components/head.html', {
+"title": "Условия доставки и самовывоза",
+"css": "delivery",
+})
+
+<body>
+    <div class="wrapper">
+
+        <div class="content">
+
+            @@include('../components/header.html')
+
+            <main class="main">
+                <section class="terms-delivery section">
+                    <div class="container">
+                        <div class="terms-delivery__box section__box">
+                            <h1 class="terms-delivery__title section__title">
+                                Условия доставки и самовывоза
+                            </h1>
+                        </div>
+                        <h2 class="sr-only">
+                            Детальная информация
+                        </h2>
+                        <ul class="terms-delivery__list">
+                            <li class="terms-delivery__item terms-delivery__item--delivery numbered-item">
+                                <h3 class="terms-delivery__subtitle">
+                                    Доставка
+                                </h3>
+                                <ul class="terms-delivery__sub-list">
+                                    <li class="terms-delivery__sub-item">
+                                        В пределах МКАД —
+                                        <span class="terms-delivery__bold">5 <span class="currency">$</span>.
+                                        </span>
+                                    </li>
+                                    <li class="terms-delivery__sub-item">
+                                        За пределами МКАД —
+                                        <span class="terms-delivery__bold">5
+                                            <span class="currency">$</span>
+                                            + 1
+                                            <span class="currency">$</span>/км.
+                                        </span>
+                                    </li>
+                                    <li class="terms-delivery__sub-item">
+                                        В пределах Бреста мы доставляем бесплатно, минимальная сумма заказа
+                                        <span class="terms-delivery__bold">
+                                            20<span class="currency">$</span>.
+                                        </span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="terms-delivery__item terms-delivery__item--selfdelivery numbered-item">
+                                <h3 class="terms-delivery__subtitle">
+                                    Самовывоз
+                                </h3>
+                                <ul class="terms-delivery__sub-list">
+                                    <li class="terms-delivery__sub-item">
+                                        Вы можете забрать нужный вам товар в нашем офисе —
+                                        <span class="terms-delivery__bold">бесплатно.</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="terms-delivery__item terms-delivery__item--ofcountry numbered-item">
+                                <h3 class="terms-delivery__subtitle">
+                                    По Беларуси
+                                </h3>
+                                <ul class="terms-delivery__sub-list">
+                                    <li class="terms-delivery__sub-item">
+                                        Доставка осуществляется через транспортную компанию по выбору клиента отгрузка
+                                        товара осуществляется в течении
+                                        <span class="terms-delivery__bold">15 минут.</span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                @@include('../components/call-back.html')
+
+            </main>
+
+        </div>
+
+        @@include('../components/footer.html')
+
+    </div>
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
