@@ -5,6 +5,7 @@ body {
     line-height: 1.6;
     color: $gray-100;
     font-style: normal;
+    background-color: #fff;
 }
 
 .lock {
@@ -19,7 +20,7 @@ body {
         top: 0;
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.5);
-        z-index: 9;
+        z-index: 4;
     }
 }
 

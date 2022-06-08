@@ -72,17 +72,14 @@
                 }
             }
 
-            @include m($lg) {
-                padding: 15px 17px;
-                font-weight: 400;
-            }
-
             @include m($md) {
                 position: fixed;
+                z-index: 13;
                 bottom: 20px;
                 right: 20px;
                 font-size: 0;
                 padding: 15px 17px;
+                background: linear-gradient(180deg, #0f3b3e 0%, #5978A9 100%);
             }
         }
 

@@ -1,0 +1,109 @@
+.delivery {
+    text-align: center;
+
+    &__box {
+        margin-bottom: 50px;
+    }
+
+    &__title {
+        max-width: 461px;
+        margin-bottom: 20px;
+
+        @include hl {
+            max-width: 100%;
+            font-size: 25px;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        counter-reset: item;
+        margin-bottom: 50px;
+        text-align: left;
+        gap: 30px;
+
+        @include m($xl) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include m($sm) {
+            margin-bottom: 30px;
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__item {
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        background-color: #f9faff;
+        border-radius: 0px 40px;
+        position: relative;
+
+        &::before {
+            content: '0'counter(item);
+            counter-increment: item;
+            position: absolute;
+            top: -22px;
+            left: 0;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 1.2;
+            color: $blue-100;
+        }
+
+        &:not(:last-child) {
+
+            &::after {
+                content: '';
+                position: absolute;
+                height: 4px;
+                width: 30px;
+                background-color: $blue-100;
+                transform: translateY(100%);
+                right: -30px;
+                top: 50%;
+            }
+
+            @include m($sm) {
+                padding: 18px;
+
+                &::after {
+                    display: none;
+                }
+            }
+
+        }
+
+        @include m($xl) {
+            &:nth-child(2n) {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+
+        @include hl {
+            padding: 18px;
+        }
+
+        @include m($sm) {
+            padding: 18px;
+        }
+
+    }
+
+    &__subtitle {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+        color: #000;
+    }
+
+    &__btn {
+        display: inline-block;
+    }
+}

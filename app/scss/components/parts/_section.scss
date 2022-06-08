@@ -1,6 +1,10 @@
 .section {
     margin-bottom: 70px;
 
+    @include m($md) {
+        margin-bottom: 50px;
+    }
+
     &__box {
         text-align: center;
     }
@@ -18,11 +22,25 @@
         &::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: 7px;
             left: 0;
             background-color: rgba(89, 120, 169, 0.3);
             height: 9px;
             width: 100%;
         }
+
+        @include hl {
+            font-size: 28px;
+        }
+
+        @include m($sm) {
+            font-size: 24px;
+        }
+    }
+
+    &__text {
+        font-size: 20px;
+        line-height: 1.5;
+        color: $black-900;
     }
 }

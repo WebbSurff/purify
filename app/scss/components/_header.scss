@@ -1,8 +1,16 @@
 .header {
     margin-bottom: 50px;
 
+    @include m($md) {
+        margin-bottom: 35px;
+    }
+
+    @include hl {
+        margin-bottom: 35px;
+    }
+
     &__top {
-        background-color: #EFF0F1;
+        background-color: #F9FAFF;
         padding: 15px 0;
     }
 
