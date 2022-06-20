@@ -46,19 +46,16 @@
         }
 
         @include m($md) {
-            max-width: 310px;
             font-size: 32px;
             margin-bottom: 20px;
         }
 
         @include hl {
-            max-width: 100%;
             font-size: 32px;
             margin-bottom: 20px;
         }
 
         @include m($sm) {
-            max-width: 254px;
             font-size: 27px;
         }
     }
@@ -201,22 +198,16 @@
     background-position: top left;
     background-size: 40px 40px;
     margin-bottom: 15px;
-    position: relative;
 
     @include m($sm) {
         background-size: 30px;
     }
 
     &::before {
-        content: '';
-        position: absolute;
         left: 10px;
         top: 0;
-        background-color: rgba(89, 120, 169, 0.1);
-        transform: rotate(40.88deg);
         width: 20px;
         height: 40px;
-        border-radius: 30px;
 
         @include m($sm) {
             background-size: 30px;

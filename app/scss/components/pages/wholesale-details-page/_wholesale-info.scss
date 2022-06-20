@@ -1,0 +1,124 @@
+.wholesale-info {
+    margin-bottom: 50px;
+
+    @include m($md) {
+        margin-bottom: 30px;
+    }
+
+    &__box {
+        padding: 65px 0 51px;
+        background-repeat: no-repeat;
+        background-position: 48% 60%;
+        background-size: 200px;
+
+        &::before {
+            width: 100px;
+            height: 220px;
+            top: 43%;
+            left: 51%;
+            border-radius: 50%;
+            transform: rotate(40.88deg) translate(-100%);
+            z-index: -1;
+
+            @include m($lg) {
+                display: none;
+            }
+
+            @include m($md) {
+                display: block;
+                top: 35%;
+                left: 83%;
+            }
+
+            @include m($sm) {
+                display: none;
+            }
+        }
+
+        @include m($lg) {
+            background-position: 54% 94%;
+            background-size: 160px;
+            padding: 40px 0;
+        }
+
+        @include m($md) {
+            background-position: 90%;
+            padding: 20px 0;
+        }
+
+        @include hl {
+            padding: 20px 0;
+            background-size: 150px;
+        }
+
+        @include m($sm) {
+            background-position: 99% 94%;
+            background-size: 100px;
+        }
+    }
+
+    &__title {
+        max-width: 366px;
+        margin-bottom: 28px;
+
+        span {
+            font-size: 40px;
+            line-height: 1.25;
+            display: block;
+            white-space: nowrap;
+
+            @include hl {
+                font-size: 33px;
+            }
+
+            @include m($sm) {
+                font-size: 24px;
+                white-space: normal;
+                display: inline-block;
+            }
+        }
+
+        @include m($sm) {
+            font-size: 22px;
+            margin-bottom: 10px;
+            max-width: 269px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 50px;
+
+        @include m($md) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__bnt {
+        display: inline-block;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 0px 50px;
+        object-fit: cover;
+
+        @include m($xl) {
+            width: 350px;
+        }
+
+        @include m($lg) {
+            opacity: 0.3;
+        }
+
+        @include m($md) {
+            display: none;
+        }
+
+        @include hl {
+            height: 100%;
+        }
+    }
+
+}

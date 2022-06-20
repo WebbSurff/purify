@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+    <link rel="icon" href="images/favicon.svg">
+    <link rel="stylesheet" href="css/what-choise.min.css">
+    <title>Какая помогает, а какая вредит?</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="content">
+
+            <header class="header">
+    <div class="header__top">
+        <div class="container">
+            <div class="header__info">
+                <div class="header__date-wrap">
+                    <a class="header__date int" href="#">
+                        <svg width="16" height="16">
+                            <use xlink:href="images/sprite.svg#local"></use>
+                        </svg>
+                        <span>
+                            Минск
+                        </span>
+                    </a>
+                </div>
+                <a class="header__date int" href="tel:11234568899">
+                    <svg width="16" height="16">
+                        <use xlink:href="images/sprite.svg#phone"></use>
+                    </svg>
+                    <span>
+                        +1 123 456 88 99
+                    </span>
+                </a>
+                <span class="header__date header__date--timetable">
+                    Пн-Вс с 10.00 до 18.00
+                </span>
+                <a class="header__date header__date--mail int" href="mailto:purify@gmail.com">
+                    <svg width="18" height="16">
+                        <use xlink:href="images/sprite.svg#mail"></use>
+                    </svg>
+                    <span>
+                        purify@gmail.com
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="header__bot">
+        <div class="container">
+            <nav class="header__nav">
+                <a class="header__logo int" href="header.html">
+                    <img class="header__logo-img" src="images/header/logo.svg" alt="logo" width="98" height="28">
+                </a>
+                <div class="header__menu menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link int" href="index.html">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link int" href="delivery.html">
+                                Доставка
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link int" href="wholesale-details.html">
+                                ОПТ
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link int" href="contact.html">
+                                Контакты
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link int" href="what-choise.html">
+                                Что защищает?
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="header__user user-nav">
+                    <li class="user-nav__item">
+                        <button class="user-nav__btn user-nav__btn--basket int" type="button">
+                            <span class="sr-only">
+                                открыть корзину
+                            </span>
+                            <svg width="24" height="24">
+                                <use xlink:href="images/sprite.svg#basket"></use>
+                            </svg>
+                            <span class="user-nav__qty">
+                                2
+                            </span>
+                            <span class="user-nav__sum">
+                                20 <span class="currency">$</span>
+                            </span>
+                        </button>
+                    </li>
+                    <li class="user-nav__item">
+                        <button class="user-nav__btn user-nav__btn--likes int" type="button">
+                            <span class="sr-only">
+                                открыть понравившееся товары
+                            </span>
+                            <svg width="24" height="24">
+                                <use xlink:href="images/sprite.svg#likes"></use>
+                            </svg>
+                            <span class="user-nav__qty">
+                                3
+                            </span>
+                        </button>
+                    </li>
+                    <li class="user-nav__item">
+                        <button class="user-nav__btn user-nav__btn--popup btn int" type="button">
+                            Заказать звонок
+                            <svg class="animate__animated  animate__pulse animate__infinite" width="20" height="20">
+                                <use xlink:href="images/sprite.svg#phone"></use>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+                <button class="header__burger" type="button">
+                    <span class="header__burger-line"></span>
+                    <span class="sr-only">
+                        открыть мобильное меню
+                    </span>
+                </button>
+            </nav>
+        </div>
+    </div>
+
+    <div class="header__basket basket-header">
+        <div class="basket-header__wrapper">
+            <div class="basket-header__top">
+                <div class="basket-header__top-wrap">
+                    <p class="basket-header__title">
+                        Корзина
+                    </p>
+                    <button class="basket-header__clear int" type="button">
+                        очистить корзину
+                    </button>
+                </div>
+                <button class="basket-header__close" type="button">
+                    <span class="sr-only">
+                        закрыть корзину
+                    </span>
+                    <svg width="24" height="24">
+                        <use xlink:href="images/sprite.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="basket-header__body">
+                <ul class="basket-header__list basket-product">
+                    <li class="basket-product__item ">
+                        <button class="basket-product__delete">
+                            <svg width="12" height="12">
+                                <use xlink:href="images/sprite.svg#close"></use>
+                            </svg>
+                            <span class="sr-only">
+                                удалить товар из корзины
+                            </span>
+                        </button>
+                        <a class="basket-product__img int" href="#">
+                            <img src="images/basket-product/1.jpg" alt="защитная маска" width="60" height="60">
+                        </a>
+                        <div class="basket-product__info">
+                            <a class="basket-product__name int" href="#">
+                                Респиратор (маска) KN95 FFP2
+                            </a>
+                            <span class="basket-product__price">
+                                10<span class="currensy">$</span>
+                            </span>
+                        </div>
+
+                        <label class="sr-only" for="enter-number">
+                            Выберите количество товаров
+                        </label>
+                        <input class="basket-product__input" type="number" value="1" min="1" name="number-products"
+                            id="enter-number" style="width:100%;" />
+
+                        <span class="basket-product__price">
+                            10<span class="currensy">$</span>
+                        </span>
+                    </li>
+                    <li class="basket-product__item ">
+                        <button class="basket-product__delete">
+                            <svg width="12" height="12">
+                                <use xlink:href="images/sprite.svg#close"></use>
+                            </svg>
+                            <span class="sr-only">
+                                удалить товар из корзины
+                            </span>
+                        </button>
+                        <a class="basket-product__img int" href="#">
+                            <img src="images/basket-product/2.jpg" alt="Антисептический гель Septel" width="60"
+                                height="60">
+                        </a>
+                        <div class="basket-product__info">
+                            <a class="basket-product__name int" href="#">
+                                Антисептический гель Septel
+                                (50 мл.)
+                            </a>
+                            <span class="basket-product__price">
+                                12<span class="currensy">$</span>
+                            </span>
+                        </div>
+                        <label class="sr-only" for="enter-number">
+                            Выберите количество товаров
+                        </label>
+                        <input class="basket-product__input" type="number" value="1" min="1" name="number-products"
+                            id="enter-number" style="width:100%;" />
+
+                        <span class="basket-product__price">
+                            12<span class="currensy">$</span>
+                        </span>
+                    </li>
+                    <li class="basket-product__item ">
+                        <button class="basket-product__delete">
+                            <svg width="12" height="12">
+                                <use xlink:href="images/sprite.svg#close"></use>
+                            </svg>
+                            <span class="sr-only">
+                                удалить товар из корзины
+                            </span>
+                        </button>
+                        <a class="basket-product__img int" href="#">
+                            <img src="images/basket-product/3.jpg" alt="Респиратор детский" width="60" height="60">
+                        </a>
+                        <div class="basket-product__info">
+                            <a class="basket-product__name int" href="#">
+                                Респиратор детский KN95 FFP2 Кitten blue
+                            </a>
+                            <span class="basket-product__price">
+                                8<span class="currensy">$</span>
+                            </span>
+                        </div>
+                        <label class="sr-only" for="enter-number">
+                            Выберите количество товаров
+                        </label>
+                        <input class="basket-product__input" type="number" value="1" min="1" name="number-products"
+                            id="enter-number" style="width:100%;" />
+
+                        <span class="basket-product__price">
+                            8<span class="currensy">$</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="basket-header__bottom">
+                <div class="basket-header__bottom-wrap">
+                    <p class="basket-header__text">
+                        Товаров на сумму
+                    </p>
+                    <span class="basket-header__sum">
+                        20<span class="currensy">$</span>
+                    </span>
+                </div>
+                <button class="basket-header__order btn" type="button">
+                    Оформить заказ
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup popup--open section">
+        <div class="popup__wrap">
+            <button class="popup__close" type="button">
+                <span class="sr-only">закрыть форму</span>
+                <svg width="18" height="18">
+                    <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <form class="popup__form form-contact form-contact--header" method="POST" enctype="multipart/form-data">
+                <h2 class="form-contact__title section__title">
+                    Закажите звонок
+                </h2>
+                <span class="form-contact__subtitle">
+                    Прямо сейчас
+                </span>
+                <label class="sr-only" for="name">ваше имя</label>
+                <input class=" form-contact__input form-contact__input--name int  input-name--header" type="text"
+                    id="name" name="enter-name" placeholder="Ваше имя">
+                <label class="sr-only" for="phone">ваш телефон</label>
+                <input class="form-contact__input form-contact__input--phone int input-tel--header" type="tel"
+                    id="phone" name="enter-phone" placeholder="Ваш телефон">
+                <button class="form-contact__btn btn int" type="submit">
+                    Заказать
+                </button>
+            </form>
+        </div>
+    </div>
+</header>
+
+            <main class="main">
+
+                <section class="stats section">
+                    <div class="container">
+                        <div class="stats__wrap">
+                            <div class="stats__content">
+                                <h1 class="stats__title section__title section__title--inner">
+                                    Маска от COVID-19
+                                    <p>
+                                        Какая помогает, а какая вредит?
+                                    </p>
+                                </h1>
+                                <p class="stats__text">
+                                    Статистика COVID-19
+                                </p>
+                                <ul class="stats__list">
+                                    <li class="stats__item">
+                                        <span class="stats__date">
+                                            2522450
+                                        </span>
+                                        <span>
+                                            Зараженных
+                                        </span>
+                                    </li>
+                                    <li class="stats__item">
+                                        <span class="stats__date">
+                                            535300
+                                        </span>
+                                        <span>
+                                            Вылечившихся
+                                        </span>
+                                    </li>
+                                    <li class="stats__item">
+                                        <span class="stats__date">
+                                            23050
+                                        </span>
+                                        <span>
+                                            Погибших
+                                        </span>
+                                    </li>
+                                </ul>
+                                <a class="stats__link btn" href="#">
+                                    Перейти в каталог
+                                </a>
+                            </div>
+                            <img class="stats__img" src="images/stats/bg.jpg" alt="люди в масках" width="445"
+                                height="440">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="better-way section">
+                    <div class="container">
+                        <div class="better-way__wrap">
+                            <img class="better-way__img" src="images/better-way/bg.jpg" alt="" width="445" height="316">
+                            <div class="better-way__box">
+                                <h2 class="better-way__title section__title section__title--inner">
+                                    Лучший способ
+                                    <p>не подхватить инфекцию</p>
+                                </h2>
+                                <p class="better-way__info">
+                                    Это полностью изолироваться от ее источников. Но это практически нереально, если вы
+                                    живете в городе. Можно избегать
+                                    массовых скоплений людей, но вирус все равно может настигнуть вас.
+                                </p>
+                                <span class="better-way__text">
+                                    В этой статье мы расскажем, как можно максимально обезопасить себя и как не
+                                    навредить в такое нелегкое время.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="no-save section">
+                    <div class="no-save__wrapper">
+                        <div class="container">
+                            <div class="no-save__wrap">
+                                <div class="no-save__box">
+                                    <h2 class="no-save__title section__title">
+                                        Что вас не спасет?
+                                    </h2>
+                                    <h3 class="no-save__subtitle">
+                                        Медицинские и хлопковые маски
+                                    </h3>
+                                    <p class="no-save__text">
+                                        То, что медицинская трехслойная маска помогает не заразиться коронавирусом — это
+                                        большое заблуждение. В случае с
+                                        коронавирусом, такие маски, а также многоразовые и тканевые не защищают от
+                                        заражения, а только помогают не
+                                        распространить вирус дальше.
+                                    </p>
+                                </div>
+                                <a data-fancybox data-da=".no-save__box,992,1" class="no-save__video play-video"
+                                    href="https://youtu.be/dukR1VXPR1s"
+                                    style="background-image: url('images/benefit/2.jpg');">
+                                    <svg class="no-save__play play-video__play" width="20px" height="20px">
+                                        <use xlink:href="images/sprite.svg#play"></use>
+                                    </svg>
+                                    <span class="sr-only">
+                                        открыть видео отзыв
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="no-save__take-order take-order">
+                        <div class="container">
+                            <div class="take-order__wrap">
+                                <img class="take-order__bg" src="images/wholesale/bg.jpg" alt="маска в руке" width="445"
+                                    height="357">
+                                <div class="take-order__product">
+                                    <h3 class="take-order__title">
+                                        <span>
+                                            Маска Чистовье
+                                        </span>
+                                        Трехслойная одноразовая маска
+                                    </h3>
+                                    <div class="take-order__box">
+                                        <a class="take-order__link-img int" href="#">
+                                            <img class="take-order__img" src="images/catalog/3.jpg" alt="Маска Чистовье"
+                                                width="250" height="250">
+                                        </a>
+                                        <form action="#" class="take-order__form product-catalog__form">
+                                            <a class="take-order__subtitle int" href="#">
+                                                Маска трехслойная Чистовье
+                                            </a>
+                                            <div class="product-catalog__choise">
+                                                <input class="product-catalog__radio" type="radio"
+                                                    id="triple-layer-1pcs" name="triple-layer" value="1pcs" checked>
+                                                <label class="product-catalog__label" for="triple-layer-1pcs">
+                                                    1 шт. 5<span class="currency">$</span>.
+                                                </label>
+                                                <input class="product-catalog__radio" type="radio"
+                                                    id="triple-layer-5pcs" name="triple-layer" value="5pcs">
+                                                <label class="product-catalog__label" for="triple-layer-5pcs">
+                                                    5 шт. 20<span class="currency">$</span>.
+                                                </label>
+                                                <input class="product-catalog__radio" type="radio"
+                                                    id="triple-layer-7pcs" name="triple-layer" value="7pcs">
+                                                <label class="product-catalog__label" for="triple-layer-7pcs">
+                                                    10 шт. 35<span class="currency">$</span>.
+                                                </label>
+                                            </div>
+                                            <button class="product-catalog__btn btn int" type="button">
+                                                В корзину
+                                                <svg width="22" height="22">
+                                                    <use xlink:href="images/sprite.svg#basket"></use>
+                                                </svg>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="medical-mask section">
+                    <div class="container">
+                        <div class="medical-mask__box section__box">
+                            <h2 class="medical-mask__title section__title section__title--inner">
+                                Почему медицинская маска
+                                <p>
+                                    бесполезна
+                                </p>
+                            </h2>
+                        </div>
+                        <ul class="medical-mask__list">
+                            <li class="medical-mask__item medical-mask__item--material oval">
+                                <h3 class="medical-mask__subtitle">
+                                    Материал
+                                </h3>
+                                <p class="medical-mask__info">
+                                    Молекулы вирусов намного меньше расстояния между волокнами ткани. Маски защищают
+                                    окружающих от заболевшего, на котором
+                                    надета маска – в ней он распространяет меньше инфекции. Именно поэтому они
+                                    обязательны для хирургов во время проведения
+                                    операций: его индивидуальные бактерии не попадают в открытые ткани пациента.
+                                </p>
+                            </li>
+                            <li class="medical-mask__item medical-mask__item--snugly oval">
+                                <h3 class="medical-mask__subtitle">
+                                    Не плотно прилегают
+                                </h3>
+                                <p class="medical-mask__info">
+                                    Резинки маски держатся на ушах, из-за чего маска часто сползает и создает
+                                    дискомфорт. Приходится ее поправлять. Каждое
+                                    прикосновение руками к маске вызывает риск попадания инфекции внутрь. Также есть
+                                    уязвимые места под глазами, где маска
+                                    прилегает не плотно. Следовательно, у вируса больше шансов попасть внутрь.
+                                </p>
+                            </li>
+                            <li class="medical-mask__item medical-mask__item--condensate oval">
+                                <h3 class="medical-mask__subtitle">
+                                    Конденсат
+                                </h3>
+                                <p class="medical-mask__info">
+                                    Выдыхаемый воздух остается на внутренней стороне медицинской маски и создает
+                                    конденсат. Ткань намокает и пропитывается
+                                    бактериями, что может усугубить ситуацию. Медицинскую маску нельзя носить дольше
+                                    2-3 часов. Иначе она становится опасной
+                                    для человека.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="mask-needed no-save section">
+                    <div class="no-save__wrapper">
+                        <div class="container">
+                            <div class="no-save__wrap">
+                                <div class="mask-needed__box no-save__box">
+                                    <h2 class="mask-needed__title section__title  section__title--inner">
+                                        Медицинская маска нужна
+                                        <p>
+                                            больному человеку
+                                        </p>
+                                    </h2>
+                                    <p class="no-save__text">
+                                        Медицинская маска нужна инфицированному человеку для того, чтобы не
+                                        распространять вирус дальше. Здорового человека от
+                                        заражения Covid-19 такая маска не спасет, а при неправильном использовании может
+                                        даже навредить.
+                                    </p>
+                                </div>
+                                <a data-fancybox data-da=".mask-needed__box,992,1" class="no-save__video play-video"
+                                    href="https://youtu.be/dukR1VXPR1s"
+                                    style="background-image: url('images/whosale-info/mask.jpg');">
+                                    <svg class="no-save__play play-video__play" width="20px" height="20px">
+                                        <use xlink:href="images/sprite.svg#play"></use>
+                                    </svg>
+                                    <span class="sr-only">
+                                        открыть видео отзыв
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="no-save__take-order take-order">
+                        <div class="container">
+                            <div class="take-order__wrap">
+                                <img class="take-order__bg" src="images/whosale-info/2.jpg" alt="маска в руке"
+                                    width="445" height="357">
+                                <div class="take-order__product">
+                                    <h3 class="take-order__title">
+                                        <span>
+                                            Защита
+                                            FFP3
+                                        </span>
+                                        Максимальная степень защиты для вашей семьи. Защита 50 ПДК
+                                    </h3>
+                                    <div class="take-order__box">
+                                        <a class="take-order__link-img int" href="#">
+                                            <img class="take-order__img" src="images/catalog/10.png"
+                                                alt="Маска Чистовье" width="250" height="250">
+                                        </a>
+                                        <form action="#" class="take-order__form product-catalog__form">
+                                            <a class="take-order__subtitle int" href="#">
+                                                Респиратор (маска) 3M 8132 FFP3
+                                                с клапаном выдоха
+                                            </a>
+                                            <div class="product-catalog__choise">
+                                                <input class="product-catalog__radio" type="radio" id="respirator-1pcs"
+                                                    name="respirator" value="1pcs" checked>
+                                                <label class="product-catalog__label" for="respirator-1pcs">
+                                                    1 шт. 5<span class="currency">$</span>.
+                                                </label>
+                                                <input class="product-catalog__radio" type="radio" id="respirator-5pcs"
+                                                    name="respirator" value="5pcs">
+                                                <label class="product-catalog__label" for="respirator-5pcs">
+                                                    5 шт. 20<span class="currency">$</span>.
+                                                </label>
+                                                <input class="product-catalog__radio" type="radio" id="respirator-7pcs"
+                                                    name="respirator" value="7pcs">
+                                                <label class="product-catalog__label" for="respirator-7pcs">
+                                                    10 шт. 35<span class="currency">$</span>.
+                                                </label>
+                                            </div>
+                                            <button class="product-catalog__btn btn int" type="button">
+                                                В корзину
+                                                <svg width="22" height="22">
+                                                    <use xlink:href="images/sprite.svg#basket"></use>
+                                                </svg>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="respirator wholesale section">
+                    <div class="container">
+                        <div class="respirator__wrap wholesale__wrap">
+                            <div class="wholesale__box">
+                                <div class="respirator__wrap-title">
+                                    <h2 class="respirator__title section__title">
+                                        А поможет ли респиратор?
+                                    </h2>
+                                </div>
+                                <div class="respirator__text">
+                                    <p>
+                                        Респираторы плотно прилегают к лицу и подразделяются на классы защиты по
+                                        принципу
+                                        степени очистки воздуха: FFP1, FFP2,
+                                        FFP3.
+                                    </p>
+                                    <p>
+                                        Каждый класс защиты имеет свой уровень ПДК (ПДК — предельно допустимые
+                                        концентрации
+                                        веществ). Чем ПДК выше, тем надежнее
+                                        респиратор.
+                                    </p>
+                                </div>
+                            </div>
+                            <img data-da=".wholesale__box,768,1" class="wholesale__img" src="images/whosale-info/3.jpg"
+                                alt="wholesale" width="445" height="357">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="how-protect benefit section">
+                    <div class="how-protect__wrapper">
+                        <div class="container">
+                            <div class="how-protect__box section__box">
+                                <h2 class="how-protect__title section__title">
+                                    Как защитить себя от коронавируса?
+                                </h2>
+                            </div>
+                            <div class="benefit__wrap">
+                                <div class="how-protect__content">
+                                    <h3 class="how-protect__subtitle">
+                                        Респираторы 3М FFP2 и FFP3
+                                    </h3>
+                                    <div class="how-protect__info">
+                                        <p>
+                                            Самые эффективные респираторы с клапаном способны задерживать частицы до 2
+                                            микрометров и могут стать барьером для
+                                            проникновения вирусов.
+                                        </p>
+                                        <p>
+                                            Клапан выдоха может включать седло клапана и гибкую створку, находящуюся в
+                                            зацеплении с седлом клапана. Гибкая створка
+                                            может содержать один или более материалов, которые могут вызывать
+                                            взблескивание
+                                            створки при переходе из закрытого
+                                            положения в открытое положение. По взблескивающему клапану пользователю
+                                            легче
+                                            убедиться, что клапан работает должным
+                                            образом.
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <a class="benefit__video play-video" href="https://youtu.be/Kd95v7m978Q"
+                                    style="background-image: url('images/benefit/4.jpeg');">
+                                    <svg class="benefit__play play-video__play" width="20px" height="20px">
+                                        <use xlink:href="images/sprite.svg#play"></use>
+                                    </svg>
+                                    <span class="sr-only">
+                                        открыть видео
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="how-protect__wrapper">
+                        <div class="container">
+                            <div class="benefit__wrap benefit__wrap--reverse">
+                                <div class="how-protect__content">
+                                    <h3 class="how-protect__subtitle">
+                                        Как правильно надевать респиратор
+                                    </h3>
+                                    <div class="how-protect__info">
+                                        <p>
+                                            Согласно исследованию Национальной медицинской библиотеки США, диаметр
+                                            вирусных
+                                            частиц коронавируса составляет около
+                                            0,125 микрометра. Но вирус не передается сам по себе. Обычно он примыкает к
+                                            каплям влаги или другим поверхностям,
+                                            создавая площадь большего диаметра.
+                                        </p>
+                                        <p>
+                                            Для наиболее эффективной защиты своих легких используйте респираторы класса
+                                            защиты FFP2 и FFP3
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <a data-fancybox class="benefit__video play-video" href="https://youtu.be/2DmFFS0dqQc"
+                                    style="background-image: url('images/benefit/5.jpeg');">
+                                    <svg class="benefit__play play-video__play" width="20px" height="20px">
+                                        <use xlink:href="images/sprite.svg#play"></use>
+                                    </svg>
+                                    <span class="sr-only">
+                                        открыть видео
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                </section>
+
+                <section class="remember wholesale section">
+                    <div class="container">
+                        <div class="remember__wrap wholesale__wrap">
+                            <div class="remember__box wholesale__box">
+                                <h2 class="remember__title section__title section__title--inner">
+                                    Маски и респираторы
+                                    <p>
+                                        не защищают глаза?
+                                    </p>
+                                </h2>
+                                <p class="remember__info">
+                                    Помните
+                                </p>
+                                <div class="remember__text">
+                                    <p>
+                                        Маски защищают только органы дыхания. Они не закрывают слизистую глаз, поэтому
+                                        риск заражения по-прежнему остается. Для
+                                        повышения собственной защиты следует использовать защитные очки, так официально
+                                        рекомендует ВОЗ.
+                                    </p>
+                                    <p>
+                                        Для защиты органов зрения рекомендуется использовать очки с непрямой
+                                        вентиляцией. Они не дают защитному стеклу
+                                        запотевать и позволяют долго находиться в них не снимая.
+                                    </p>
+                                </div>
+                            </div>
+                            <img data-da=".remember__box,768,1" class="wholesale__img" src="images/whosale-info/4.jpg"
+                                alt="wholesale" width="445" height="357">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="basic-measures terms-delivery section">
+                    <div class="container">
+                        <div class="basic-measures__box section__box">
+                            <h2 class="basic-measures__title  section__title section__title--inner">
+                                основные меры предосторожности
+                                <p>
+                                    для защиты от новой короновирусной инфекции
+                                </p>
+                            </h2>
+                            <p class="section__text">
+                                Рекомендации ВОЗ
+                            </p>
+                        </div>
+
+                        <ul class="terms-delivery__list">
+                            <li class="terms-delivery__item numbered-item">
+                                <h3
+                                    class="basic-measures__subtitle basic-measures__subtitle--heand terms-delivery__subtitle oval">
+                                    Регулярно
+                                    мойте руки
+                                </h3>
+                                <p class="basic-measures__info">
+                                    С мылом не менее 20 секунд или используйте дезинфицирующее средство на основе
+                                    спирта.
+                                </p>
+                            </li>
+                            <li class="terms-delivery__item numbered-item">
+                                <h3
+                                    class="basic-measures__subtitle basic-measures__subtitle--distance terms-delivery__subtitle oval">
+                                    Соблюдайте дистанцию
+                                </h3>
+                                <p class="basic-measures__info">
+                                    Держитесь от людей на расстоянии как минимум 1 метра, особенно если у них кашель,
+                                    насморк и повышенная температура.
+                                </p>
+                            </li>
+                            <li class="terms-delivery__item numbered-item">
+                                <h3
+                                    class="basic-measures__subtitle basic-measures__subtitle--hygiene terms-delivery__subtitle oval">
+                                    Cоблюдайте правила гигиены
+                                </h3>
+                                <p class="basic-measures__info">
+                                    По возможности, не трогайте руками глаза, нос и рот и соблюдайте правила
+                                    респираторной гигиены.
+                                </p>
+                            </li>
+                            <li class="terms-delivery__item numbered-item">
+                                <h3
+                                    class="basic-measures__subtitle basic-measures__subtitle--contact terms-delivery__subtitle oval">
+                                    Обращайтесь за мед. помощью
+                                </h3>
+                                <p class="basic-measures__info">
+                                    При повышении температуры, появлении кашля и затруднении дыхания как можно быстрее
+                                    обращайтесь за медицинской помощью.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="catalog catalog--transparent section">
+                    <div class="container">
+                        <div class="catalog__box section__box">
+                            <h2 class="catalog__title section__title">
+                                Каталог в наличии
+                            </h2>
+                            <div class="catalog__nav-prev nav-prev">
+                                <svg width="18" height="20">
+                                    <use xlink:href="images/sprite.svg#left"></use>
+                                </svg>
+                            </div>
+                            <div class="catalog__nav-next nav-next">
+                                <svg width="18" height="20">
+                                    <use xlink:href="images/sprite.svg#right"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="catalog__wrap-btn swiper">
+                            <ul class="catalog__list swiper-wrapper">
+                                <li class="catalog__item swiper-slide">
+                                    <button class="catalog__btn int" type="button" data-filter="all">
+                                        Все товары
+                                    </button>
+                                </li>
+                                <li class="catalog__item swiper-slide">
+                                    <button class="catalog__btn int" type="button" data-filter=".category-a">
+                                        Респираторы
+                                    </button>
+                                </li>
+                                <li class="catalog__item swiper-slide">
+                                    <button class="catalog__btn int" type="button">
+                                        FFP1
+                                    </button>
+                                </li>
+                                <li class="catalog__item swiper-slide">
+                                    <button class="catalog__btn int" type="button" data-filter=".category-a">
+                                        FFP2
+                                    </button>
+                                </li>
+                                <li class="catalog__item swiper-slide">
+                                    <button class="catalog__btn int" type="button" data-filter=".category-b">
+                                        FFP3
+                                    </button>
+                                </li>
+                                <li class="catalog__item swiper-slide">
+                                    <button class="catalog__btn int" type="button" data-filter=".category-c">
+                                        3M
+                                    </button>
+                                </li>
+                                <li class="catalog__item swiper-slide">
+                                    <button class="catalog__btn int" type="button" data-filter=".category-d">
+                                        Гель
+                                    </button>
+                                </li>
+                                <li class="catalog__item swiper-slide">
+                                    <button class="catalog__btn int" type="button" data-filter=".category-e">
+                                        Spirotek
+                                    </button>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <ul class="catalog__product product-catalog">
+                            <li class="product-catalog__item mix category-a">
+                                <article class="product-catalog__wrap">
+                                    <a class="product-catalog__link-img int" href="#">
+                                        <img class="product-catalog__img" src="images/catalog/1.jpg" alt="catalog"
+                                            width="200" height="200">
+                                    </a>
+                                    <a class="product-catalog__title-link int" href="#">
+                                        <h3 class="product-catalog__title">
+                                            Респиратор (маска) KN95 FFP2
+                                            без клапана
+                                        </h3>
+                                    </a>
+                                    <form class="product-catalog__form" action="#">
+                                        <div class="product-catalog__choise">
+                                            <input class="product-catalog__radio" type="radio" id="1pcs"
+                                                name="without-valve" value="1pcs" checked>
+                                            <label class="product-catalog__label" for="1pcs">
+                                                1 шт. 5<span class="currency">$</span>.
+                                            </label>
+                                            <input class="product-catalog__radio" type="radio" id="5pcs"
+                                                name="without-valve" value="5pcs">
+                                            <label class="product-catalog__label" for="5pcs">
+                                                5 шт. 20<span class="currency">$</span>.
+                                            </label>
+                                            <input class="product-catalog__radio" type="radio" id="7pcs"
+                                                name="without-valve" value="7pcs">
+                                            <label class="product-catalog__label" for="7pcs">
+                                                10 шт. 35<span class="currency">$</span>.
+                                            </label>
+                                        </div>
+                                        <button class="product-catalog__btn btn int" type="button">
+                                            В корзину
+                                            <svg width="22" height="22">
+                                                <use xlink:href="images/sprite.svg#basket"></use>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </article>
+                            </li>
+                            <li class="product-catalog__item mix category-a">
+                                <article class="product-catalog__wrap">
+                                    <a class="product-catalog__link-img int" href="#">
+                                        <img class="product-catalog__img" src="images/catalog/2.jpg" alt="catalog"
+                                            width="200" height="200">
+                                    </a>
+                                    <a class="product-catalog__title-link int" href="#">
+                                        <h3 class="product-catalog__title">
+                                            Респиратор (маска) KN95 FFP2
+                                        </h3>
+                                    </a>
+                                    <form class="product-catalog__form" action="#">
+                                        <div class="product-catalog__choise">
+                                            <input class="product-catalog__radio" type="radio" id="with-valve-1pcs"
+                                                name="with-valve" value="1pcs" checked>
+                                            <label class="product-catalog__label" for="with-valve-1pcs">
+                                                1 шт. 7<span class="currency">$</span>.
+                                            </label>
+                                            <input class="product-catalog__radio" type="radio" id="with-valve-5pcs"
+                                                name="with-valve" value="5pcs">
+                                            <label class="product-catalog__label" for="with-valve-5pcs">
+                                                5 шт. 24<span class="currency">$</span>.
+                                            </label>
+                                            <input class="product-catalog__radio" type="radio" id="with-valve-7pcs"
+                                                name="with-valve" value="7pcs">
+                                            <label class="product-catalog__label" for="with-valve-7pcs">
+                                                10 шт. 39<span class="currency">$</span>.
+                                            </label>
+                                        </div>
+                                        <button class="product-catalog__btn btn int" type="button">
+                                            В корзину
+                                            <svg width="22" height="22">
+                                                <use xlink:href="images/sprite.svg#basket"></use>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </article>
+                            </li>
+                            <li class="product-catalog__item mix category-a">
+                                <article class="product-catalog__wrap">
+                                    <a class="product-catalog__link-img int" href="#">
+                                        <img class="product-catalog__img" src="images/catalog/3.jpg" alt="catalog"
+                                            width="200" height="200">
+                                    </a>
+                                    <a class="product-catalog__title-link int" href="#">
+                                        <h3 class="product-catalog__title">
+                                            Респиратор (маска) KN95 FFP2
+                                        </h3>
+                                    </a>
+                                    <form class="product-catalog__form" action="#">
+                                        <div class="product-catalog__choise">
+                                            <input class="product-catalog__radio" type="radio"
+                                                id="with-valve-black-1pcs" name="with-valve-black" value="1pcs" checked>
+                                            <label class="product-catalog__label" for="with-valve-black-1pcs">
+                                                1 шт. 7<span class="currency">$</span>.
+                                            </label>
+                                            <input class="product-catalog__radio" type="radio"
+                                                id="with-valve-black-5pcs" name="with-valve-black" value="5pcs">
+                                            <label class="product-catalog__label" for="with-valve-black-5pcs">
+                                                5 шт. 24<span class="currency">$</span>.
+                                            </label>
+                                            <input class="product-catalog__radio" type="radio"
+                                                id="with-valve-black-7pcs" name="with-valve-black" value="7pcs">
+                                            <label class="product-catalog__label" for="with-valve-black-7pcs">
+                                                10 шт. 39<span class="currency">$</span>.
+                                            </label>
+                                        </div>
+                                        <button class="product-catalog__btn btn int" type="button">
+                                            В корзину
+                                            <svg width="22" height="22">
+                                                <use xlink:href="images/sprite.svg#basket"></use>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </article>
+                            </li>
+                            <li class="product-catalog__item mix category-c">
+                                <article class="product-catalog__wrap">
+                                    <a class="product-catalog__link-img int" href="#">
+                                        <img class="product-catalog__img" src="images/catalog/4.jpg" alt="catalog"
+                                            width="150" height="200">
+                                    </a>
+                                    <a class="product-catalog__title-link int" href="#">
+                                        <h3 class="product-catalog__title">
+                                            Тапочки одноразовые спанбонд/прозрачные/черные
+                                        </h3>
+                                    </a>
+                                    <form class="product-catalog__form" action="#">
+                                        <div class="product-catalog__choise">
+                                            <input class="product-catalog__radio" type="radio"
+                                                id="disposable-slippers-1pcs" name="disposable-slippers" value="1pcs"
+                                                checked>
+                                            <label class="product-catalog__label" for="disposable-slippers-1pcs">
+                                                1 уп. (1 пара) 3<span class="currency">$</span>.
+                                            </label>
+                                            <input class="product-catalog__radio" type="radio"
+                                                id="disposable-slippers-5pcs" name="disposable-slippers"
+                                                value="disposable-slippers-5pcs">
+                                            <label class="product-catalog__label" for="disposable-slippers-5pcs">
+                                                5 уп. (5 пар) 12<span class="currency">$</span>.
+                                            </label>
+                                            <input class="product-catalog__radio" type="radio"
+                                                id="disposable-slippers-10pcs" name="disposable-slippers"
+                                                value="disposable-slippers-10pcs">
+                                            <label class="product-catalog__label" for="disposable-slippers-10pcs">
+                                                10 уп. (10 пар) 25<span class="currency">$</span>.
+                                            </label>
+                                        </div>
+                                        <button class="product-catalog__btn btn int" type="button">
+                                            В корзину
+                                            <svg width="22" height="22">
+                                                <use xlink:href="images/sprite.svg#basket"></use>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </article>
+                            </li>
+                            <li class="product-catalog__item mix category-c">
+                                <article class="product-catalog__wrap">
+                                    <a class="product-catalog__link-img int" href="#">
+                                        <img class="product-catalog__img" src="images/catalog/5.jpg" alt="catalog"
+                                            width="180" height="200">
+                                    </a>
+                                    <a class="product-catalog__title-link int" href="#">
+                                        <h3 class="product-catalog__title">
+                                            Тапочки Махровые Оптима Плюс, одноразовые
+                                        </h3>
+                                    </a>
+                                    <form class="product-catalog__form" action="#">
+                                        <div class="product-catalog__choise">
+                                            <input class="product-catalog__radio" type="radio" id="slippers-1pcs"
+                                                name="slippers" value="slippers-1pcs" checked>
+                                            <label class="product-catalog__label" for="slippers-1pcs">
+                                                1 уп. (1 пара) 5<span class="currency">$</span>.
+                                            </label>
+                                            <input class="product-catalog__radio" type="radio" id="slippers-5pcs"
+                                                name="slippers" value="slippers-5pcs">
+                                            <label class="product-catalog__label" for="slippers-5pcs">
+                                                5 уп. (5 пар) 18<span class="currency">$</span>.
+                                            </label>
+                                            <input class="product-catalog__radio" type="radio" id="slippers-10pcs"
+                                                name="slippers" value="slippers-10pcs">
+                                            <label class="product-catalog__label" for="slippers-10pcs">
+                                                10 уп. (10 пар) 35<span class="currency">$</span>.
+                                            </label>
+                                        </div>
+                                        <button class="product-catalog__btn btn int" type="button">
+                                            В корзину
+                                            <svg width="22" height="22">
+                                                <use xlink:href="images/sprite.svg#basket"></use>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </article>
+                            </li>
+                            <li class="product-catalog__item  mix category-d">
+                                <article class="product-catalog__wrap">
+                                    <a class="product-catalog__link-img int" href="#">
+                                        <img class="product-catalog__img" src="images/catalog/6.jpg" alt="catalog"
+                                            width="180" height="200">
+                                    </a>
+                                    <a class="product-catalog__title-link int" href="#">
+                                        <h3 class="product-catalog__title">
+                                            Антисептический гель Septel
+                                            (50 мл.)
+                                        </h3>
+                                    </a>
+                                    <form class="product-catalog__form" action="#">
+                                        <div class="product-catalog__choise">
+                                            <input class="product-catalog__radio" type="radio" id="antiseptic-1pcs"
+                                                name="antiseptic" value="antiseptic-1pcs" checked>
+                                            <label class="product-catalog__label" for="antiseptic-1pcs">
+                                                1 шт. 10<span class="currency">$</span>.
+                                            </label>
+                                            <input class="product-catalog__radio" type="radio" id="antiseptic-5pcs"
+                                                name="antiseptic" value="antiseptic-5pcs">
+                                            <label class="product-catalog__label" for="antiseptic-5pcs">
+                                                5 шт. 40<span class="currency">$</span>.
+                                            </label>
+                                            <input class="product-catalog__radio" type="radio" id="antiseptic-7pcs"
+                                                name="antiseptic" value="antiseptic-7pcs">
+                                            <label class="product-catalog__label" for="antiseptic-7pcs">
+                                                10 шт. 80<span class="currency">$</span>.
+                                            </label>
+                                        </div>
+                                        <button class="product-catalog__btn btn int" type="button">
+                                            В корзину
+                                            <svg width="22" height="22">
+                                                <use xlink:href="images/sprite.svg#basket"></use>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </article>
+                            </li>
+                            <li class="product-catalog__item mix category-b">
+                                <article class="product-catalog__wrap">
+                                    <a class="product-catalog__link-img int" href="#">
+                                        <img class="product-catalog__img" src="images/catalog/7.jpg" alt="catalog"
+                                            width="180" height="200">
+                                    </a>
+                                    <a class="product-catalog__title-link int" href="#">
+                                        <h3 class="product-catalog__title">
+                                            Экран защитный для лица
+                                        </h3>
+                                    </a>
+                                    <form class="product-catalog__form" action="#">
+                                        <div class="product-catalog__choise">
+                                            <input class="product-catalog__radio" type="radio" id="for-face-1pcs"
+                                                name="for-face" value="for-face-1pcs" checked>
+                                            <label class="product-catalog__label" for="for-face-1pcs">
+                                                1шт. 3<span class="currency">$</span>.
+                                            </label>
+                                            <input class="product-catalog__radio" type="radio" id="for-face-5pcs"
+                                                name="for-face" value="for-face-5pcs">
+                                            <label class="product-catalog__label" for="for-face-5pcs">
+                                                5шт. 12<span class="currency">$</span>.
+                                            </label>
+                                            <input class="product-catalog__radio" type="radio" id="for-face-10pcs"
+                                                name="for-face" value="for-face-10pcs">
+                                            <label class="product-catalog__label" for="for-face-10pcs">
+                                                10шт. 25<span class="currency">$</span>.
+                                            </label>
+                                        </div>
+                                        <button class="product-catalog__btn btn int" type="button">
+                                            В корзину
+                                            <svg width="22" height="22">
+                                                <use xlink:href="images/sprite.svg#basket"></use>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </article>
+                            </li>
+                            <li class="product-catalog__item mix category-e">
+                                <article class="product-catalog__wrap">
+                                    <a class="product-catalog__link-img int" href="#">
+                                        <img class="product-catalog__img" src="images/catalog/8.jpg" alt="catalog"
+                                            width="180" height="200">
+                                    </a>
+                                    <a class="product-catalog__title-link int" href="#">
+                                        <h3 class="product-catalog__title">
+                                            Sanitizer антисептический спрей (50 мл.)
+                                        </h3>
+                                    </a>
+                                    <form class="product-catalog__form" action="#">
+                                        <div class="product-catalog__choise">
+                                            <input class="product-catalog__radio" type="radio" id="sanitizer-1pcs"
+                                                name="sanitizer" value="sanitizer-1pcs" checked>
+                                            <label class="product-catalog__label" for="sanitizer-1pcs">
+                                                1шт. 4<span class="currency">$</span>.
+                                            </label>
+                                            <input class="product-catalog__radio" type="radio" id="sanitizer-5pcs"
+                                                name="sanitizer" value="sanitizer-5pcs">
+                                            <label class="product-catalog__label" for="sanitizer-5pcs">
+                                                5шт. 18<span class="currency">$</span>.
+                                            </label>
+                                            <input class="product-catalog__radio" type="radio" id="sanitizer-10pcs"
+                                                name="sanitizer" value="sanitizer-10pcs">
+                                            <label class="product-catalog__label" for="sanitizer-10pcs">
+                                                10шт. 35<span class="currency">$</span>.
+                                            </label>
+                                        </div>
+                                        <button class="product-catalog__btn btn int" type="button">
+                                            В корзину
+                                            <svg width="22" height="22">
+                                                <use xlink:href="images/sprite.svg#basket"></use>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </article>
+                            </li>
+                            <li class="product-catalog__item mix category-a">
+                                <article class="product-catalog__wrap">
+                                    <a class="product-catalog__link-img int" href="#">
+                                        <img class="product-catalog__img" src="images/catalog/9.jpg" alt="catalog"
+                                            width="180" height="200">
+                                    </a>
+                                    <a class="product-catalog__title-link int" href="#">
+                                        <h3 class="product-catalog__title">
+                                            Респиратор детский KN95 FFP2 Кitten blue
+                                        </h3>
+                                    </a>
+                                    <form class="product-catalog__form" action="#">
+                                        <div class="product-catalog__choise">
+                                            <input class="product-catalog__radio" type="radio"
+                                                id="childrens-respirator-1pcs" name="childrens-respirator"
+                                                value="childrens-respirator-1pcs" checked>
+                                            <label class="product-catalog__label" for="childrens-respirator-1pcs">
+                                                1 шт. 10<span class="currency">$</span>.
+                                            </label>
+                                            <input class="product-catalog__radio" type="radio"
+                                                id="childrens-respirator-5pcs" name="childrens-respirator"
+                                                value="childrens-respirator-5pcs">
+                                            <label class="product-catalog__label" for="childrens-respirator-5pcs">
+                                                5 шт. 40<span class="currency">$</span>.
+                                            </label>
+                                            <input class="product-catalog__radio" type="radio"
+                                                id="childrens-respirator-7pcs" name="childrens-respirator"
+                                                value="childrens-respirator-7pcs">
+                                            <label class="product-catalog__label" for="childrens-respirator-7pcs">
+                                                10 шт. 80<span class="currency">$</span>.
+                                            </label>
+                                        </div>
+                                        <button class="product-catalog__btn btn int" type="button">
+                                            В корзину
+                                            <svg width="22" height="22">
+                                                <use xlink:href="images/sprite.svg#basket"></use>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </article>
+                            </li>
+                        </ul>
+                        <button class="catalog__more int" type="button">
+                            Все товары
+                        </button>
+                    </div>
+                </section>
+
+            </main>
+
+        </div>
+
+        <footer class="footer section">
+    <h2 class="sr-only">
+        Контакты и информация о нас
+    </h2>
+    <div class="container">
+        <div class="footer__wrap">
+            <div class="footer__box">
+                <h3 class="footer__title section__title">
+                    Контакты
+                </h3>
+                <address class="footer__address address-footer">
+                    <h4 class="address-footer__subtitle">
+                        <svg width="16" height="16">
+                            <use xlink:href="images/sprite.svg#local"></use>
+                        </svg>
+                        <span>
+                            Наш адрес
+                        </span>
+                    </h4>
+                    <p class="address-footer__date">
+                        <span>
+                            Минск, бульвар Мулявина, 6
+                        </span>
+                        <span>
+                            Брест, переулок Фортечный, 12
+                        </span>
+                    </p>
+                    <h4 class="address-footer__subtitle">
+                        <svg width="16" height="16">
+                            <use xlink:href="images/sprite.svg#phone"></use>
+                        </svg>
+                        <span>
+                            Наш телефон
+                        </span>
+                    </h4>
+                    <a class="address-footer__link int" href="tel:11234568899">
+                        +1 123 456 88 99
+                    </a>
+                    <h4 class="address-footer__subtitle">
+                        <svg width="16" height="16">
+                            <use xlink:href="images/sprite.svg#mail"></use>
+                        </svg>
+                        <span>
+                            Нашa почта
+                        </span>
+                    </h4>
+                    <a class="address-footer__link int" href="mailto:purify@gmail.com">
+                        purify@gmail.com
+                    </a>
+                </address>
+                <img class="footer__img" src="images/footer/1.jpg" alt="paymnet" width="255" height="22">
+            </div>
+            <div class="footer__info">
+                <h3 class="footer__title section__title">
+                    о магазине
+                </h3>
+                <p class="footer__about">
+                    Специализированный магазин сертифицированных, оригинальных защитных материалов для органов дыхания и
+                    защиты от вируса
+                    COVID-19
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="js/dynamicAdapt.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

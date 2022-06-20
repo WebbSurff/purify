@@ -5,9 +5,18 @@ $(function () {
     let containerDynamic = document.querySelector("max");
     let da;
     if (containerDynamic) da = new DynamicAdapt(containerDynamic);
+
+
+    let headerFix = $('.header__bot');
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 30) {
+            headerFix.addClass('active');
+        } else {
+            headerFix.removeClass('active');
+        }
+    });
 });
-
-
 
 let containerEl = document.querySelector('.product-catalog');
 let mixer;
@@ -139,3 +148,225 @@ burgerMenu.addEventListener('click', function () {
     body.classList.toggle('lock');
 })
 
+
+console.log('Init!');
+
+// inputmask-header
+
+const form = document.querySelector('.form-contact--header');
+const validation = new JustValidate('.form-contact--header');
+const inputMask = new Inputmask('+1 (999) 999-99-99');
+const telSelector = form.querySelector('input[type="tel"]');
+
+inputMask.mask(telSelector);
+
+validation
+    .addField('.input-name--header', [{
+        rule: 'maxLength',
+        value: 30,
+    },
+    {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Введите имя!'
+    }
+    ])
+    .addField('.input-tel--header', [{
+        rule: 'required',
+        value: true,
+        errorMessage: 'Телефон обязателен',
+    },
+    {
+        rule: 'function',
+        validator: function () {
+            const phone = telSelector.inputmask.unmaskedvalue();
+            return phone.length === 10;
+        },
+        errorMessage: 'Введите корректный телефон',
+    },
+    ]).onSuccess((event) => {
+        console.log('Validation passes and form submitted', event);
+
+        let formData = new FormData(event.target);
+
+        console.log(...formData);
+
+        let xhr = new XMLHttpRequest();
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 2) {
+                if (xhr.status === 200) {
+                    console.log('Отправлено');
+                }
+            }
+        }
+
+        xhr.open('POST', 'mail.php', true);
+        xhr.send(formData);
+
+        event.target.reset();
+    });
+
+
+// inputmask(contact, delivery)
+
+let formContact = document.querySelector('.form-contact--contact');
+if (formContact = formContact) {
+
+    const validationContact = new JustValidate('.form-contact--contact');
+    const telSelectorContact = formContact.querySelector('input[type="tel"]');
+
+    inputMask.mask(telSelectorContact);
+
+
+    validationContact
+        .addField('.input-name--contact', [{
+            rule: 'minLength',
+            value: 3,
+        },
+        {
+            rule: 'maxLength',
+            value: 30,
+        },
+        {
+            rule: 'required',
+            value: true,
+            errorMessage: 'Введите имя!'
+        }
+        ])
+        .addField('.input-tel--contact', [{
+            rule: 'required',
+            value: true,
+            errorMessage: 'Телефон обязателен',
+        },
+        {
+            rule: 'function',
+            validator: function () {
+                const phone = telSelectorContact.inputmask.unmaskedvalue();
+                return phone.length === 10;
+            },
+            errorMessage: 'Введите корректный телефон',
+        },
+        ]).onSuccess((event) => {
+            console.log('Validation passes and form submitted', event);
+
+            let formData = new FormData(event.target);
+
+            console.log(...formData);
+
+            let xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 2) {
+                    if (xhr.status === 200) {
+                        console.log('Отправлено');
+                    }
+                }
+            }
+            xhr.open('POST', 'mail.php', true);
+            xhr.send(formData);
+
+            event.target.reset();
+        });
+
+}
+
+// Wholesale-details Form
+
+let wholesaleForm = document.querySelector('.wholesale-form');
+if (wholesaleForm = wholesaleForm) {
+    const wholesaValidation = new JustValidate('.wholesale-form', {
+        tooltip: {
+            position: 'bottom',
+        },
+
+    });
+
+    const wholesaleSelector = wholesaleForm.querySelector('input[type="tel"]');
+    inputMask.mask(wholesaleSelector);
+
+    wholesaValidation
+        .addField('.wholesale-form__input--name', [{
+            rule: 'minLength',
+            value: 3,
+            errorMessage: 'Минимальное количество сиволов 3!'
+        },
+        {
+            rule: 'maxLength',
+            value: 30,
+        },
+        {
+            rule: 'required',
+            value: true,
+            errorMessage: 'Введите имя!'
+        }
+        ])
+        .addField('.wholesale-form__input--mail', [{
+            rule: 'required',
+            value: true,
+            errorMessage: 'Email обязателен',
+        },
+        {
+            rule: 'email',
+            value: true,
+            errorMessage: 'Введите корректный Email',
+        },
+        ])
+        .addField('.wholesale-form__textarea', [{
+            rule: 'minLength',
+            value: 10,
+            errorMessage: 'Минимальное количество сиволов 10!'
+        },
+        {
+            rule: 'required',
+            value: true,
+            errorMessage: 'Введите ваше сообщение!'
+        }
+        ])
+        .addField('.wholesale-form__input-file', [
+            {
+                rule: 'minFilesCount',
+                value: 1,
+                errorMessage: 'Добавьте минимум 1 файл!'
+            },
+            {
+                rule: 'maxFilesCount',
+                value: 3,
+            },
+        ])
+        .addField('.wholesale-form__input--tel', [{
+            rule: 'required',
+            value: true,
+            errorMessage: 'Телефон обязателен',
+        },
+        {
+            rule: 'function',
+            validator: function () {
+                const phone = wholesaleSelector.inputmask.unmaskedvalue();
+                return phone.length === 10;
+            },
+            errorMessage: 'Введите корректный телефон',
+        },
+        ]).onSuccess((event) => {
+            console.log('Validation passes and form submitted', event);
+
+            let formData = new FormData(event.target);
+
+            console.log(...formData);
+
+            let xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        console.log('Отправлено');
+                    }
+                }
+            }
+
+            xhr.open('POST', 'mail.php', true);
+            xhr.send(formData);
+
+            event.target.reset();
+        });
+}

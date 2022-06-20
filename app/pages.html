@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+    <link rel="icon" href="images/favicon.svg">
     <link rel="stylesheet" href="css/index.min.css">
     <title>Document</title>
 </head>
@@ -53,33 +55,33 @@
     <div class="header__bot">
         <div class="container">
             <nav class="header__nav">
-                <a class="header__logo int" href="#">
+                <a class="header__logo int" href="header.html">
                     <img class="header__logo-img" src="images/header/logo.svg" alt="logo" width="98" height="28">
                 </a>
                 <div class="header__menu menu">
                     <ul class="menu__list">
                         <li class="menu__item">
-                            <a class="menu__link int" href="#">
-                                Каталог
+                            <a class="menu__link int" href="index.html">
+                                Главная
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link int" href="#">
+                            <a class="menu__link int" href="delivery.html">
                                 Доставка
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link int" href="#">
+                            <a class="menu__link int" href="wholesale-details.html">
                                 ОПТ
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link int" href="#">
+                            <a class="menu__link int" href="contact.html">
                                 Контакты
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link int" href="#">
+                            <a class="menu__link int" href="what-choise.html">
                                 Что защищает?
                             </a>
                         </li>
@@ -275,7 +277,7 @@
                     <use xlink:href="images/sprite.svg#close"></use>
                 </svg>
             </button>
-            <form class="popup__form form-contact" action="#">
+            <form class="popup__form form-contact form-contact--header" method="POST" enctype="multipart/form-data">
                 <h2 class="form-contact__title section__title">
                     Закажите звонок
                 </h2>
@@ -283,11 +285,11 @@
                     Прямо сейчас
                 </span>
                 <label class="sr-only" for="name">ваше имя</label>
-                <input class="form-contact__input form-contact__input--name int" type="text" id="name" name="enter-name"
-                    placeholder="Ваше имя">
+                <input class=" form-contact__input form-contact__input--name int  input-name--header" type="text"
+                    id="name" name="enter-name" placeholder="Ваше имя">
                 <label class="sr-only" for="phone">ваш телефон</label>
-                <input class="form-contact__input form-contact__input--phone int" type="tel" id="phone"
-                    name="enter-phone" placeholder="Ваш телефон">
+                <input class="form-contact__input form-contact__input--phone int input-tel--header" type="tel"
+                    id="phone" name="enter-phone" placeholder="Ваш телефон">
                 <button class="form-contact__btn btn int" type="submit">
                     Заказать
                 </button>

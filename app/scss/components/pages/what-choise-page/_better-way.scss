@@ -1,0 +1,84 @@
+.better-way {
+    background-color: #f9faff;
+
+    &__wrap {
+        position: relative;
+        padding: 70px 0;
+
+        @include m($lg) {
+            padding: 0;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: calc(445/1195*100%);
+        object-position: top center;
+        border-radius: 50px 0px;
+        transform: translateY(-50%);
+        object-fit: cover;
+
+        @include m($md) {
+            display: none;
+        }
+    }
+
+    &__box {
+        max-width: calc(700/1195*100%);
+
+        margin-left: auto;
+        padding: 38px 0 39px;
+
+        @include m($md) {
+            max-width: 100%;
+            padding: 20px 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 30px;
+
+        p {
+            font-size: 28px;
+            line-height: 1.4;
+            display: block;
+
+            @include m($sm) {
+                font-size: 20px;
+
+                &::after {
+                    height: 5px;
+                }
+            }
+        }
+    }
+
+    &__info {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        color: $black-200;
+    }
+
+    &__text {
+        display: block;
+        padding-left: 20px;
+        position: relative;
+
+        @include m($sm) {
+            padding-left: 10px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: $blue-100;
+            width: 2px;
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,95 @@
+.basic-measures {
+    padding: 70px 0;
+    background-color: #f9faff;
+
+    @include m($md) {
+        padding: 20px 0;
+    }
+
+    &__box {
+        margin-bottom: 40px;
+
+        @include m($md) {
+            text-align: left;
+        }
+    }
+
+    &__title {
+        margin-bottom: 30px;
+
+        @include m($md) {
+            font-size: 26px;
+        }
+
+        p {
+            font-size: 24px;
+
+            @include m($md) {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .terms-delivery__list {
+        grid-template-columns: repeat(4, 1fr);
+
+        @include m($lg) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include m($sm) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    .terms-delivery__item {
+        padding: 0;
+        padding-left: 20px;
+    }
+
+    &__subtitle {
+        padding: 20px 16px 25px 64px;
+        margin-bottom: 0;
+        color: $black-200;
+        background-repeat: no-repeat;
+        background-size: 50px 50px;
+        background-position: 0 18px;
+
+        &--heand {
+            background-image: url('../images/basic-measurce/heand.svg');
+        }
+
+        &--distance {
+            background-image: url('../images/basic-measurce/distance.svg');
+        }
+
+        &--hygiene {
+            background-image: url('../images/basic-measurce/hygiene.svg');
+        }
+
+        &--contact {
+            background-image: url('../images/basic-measurce/contact.svg');
+        }
+
+        &::before {
+            left: 17px;
+            top: 20px;
+        }
+
+        @include m($sm) {
+            background-size: 30px 30px;
+            padding: 20px 16px 15px 40px;
+
+            &::before {
+                left: 14px;
+                top: 20px;
+            }
+        }
+    }
+
+    &__info {
+        padding: 0 25px 20px 0;
+    }
+}

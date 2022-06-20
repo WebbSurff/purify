@@ -1,0 +1,120 @@
+.advantage {
+    padding: 70px 0;
+    background-color: #f9faff;
+
+    @include m($lg) {
+        padding: 40px 0;
+    }
+
+    &__box {
+        max-width: 640px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+
+        p {
+            font-size: 30px;
+
+            @include m($sm) {
+                font-size: 23px;
+            }
+        }
+    }
+
+    &__text {
+        @include line-clamp (6);
+    }
+
+    &__list {
+        display: flex;
+
+        @include m($md) {
+            flex-direction: column;
+        }
+
+    }
+
+    &__item {
+        flex: 0 1 33.3333%;
+        background-color: #fff;
+        text-align: center;
+        padding: 100px 37px 30px;
+        border-radius: 40px 0px;
+        min-height: 100%;
+        background-repeat: no-repeat;
+        background-size: 50px;
+        background-position: 50% 22px;
+        position: relative;
+
+        &--instock {
+            background-image: url('../images/advantage/instock.svg');
+        }
+
+        &--pay {
+            background-image: url('../images/advantage/pay.svg');
+        }
+
+        &--original {
+            background-image: url('../images/hero/original.svg');
+        }
+
+        &:not(:last-child) {
+            margin-right: 30px;
+
+            @include m($lg) {
+                margin-right: 20px;
+            }
+
+            @include m($md) {
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+        }
+
+        &::before {
+            width: 30px;
+            height: 65px;
+            top: 15px;
+            left: 46%;
+
+            @include m($lg) {
+                width: 22px;
+                height: 57px;
+            }
+
+            @include m($md) {
+                left: 48%;
+            }
+
+            @include m($sm) {
+                top: 6px;
+            }
+        }
+
+        @include m($lg) {
+            padding: 70px 10px 20px;
+            background-size: 40px;
+        }
+
+        @include m($md) {
+            flex: auto;
+        }
+
+        @include m($sm) {
+            background-position: 50% 10px;
+        }
+
+    }
+
+    &__subtitle {
+        font-weight: 500;
+        font-size: 16px;
+        margin-bottom: 15px;
+        line-height: 1.3;
+        color: #000;
+    }
+
+}

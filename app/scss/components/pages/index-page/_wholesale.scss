@@ -19,6 +19,10 @@
 
     &__title {
         margin-bottom: 20px;
+
+        @include m($xs) {
+            font-size: 22px;
+        }
     }
 
     &__text {

@@ -1,0 +1,83 @@
+.contact-date {
+    margin-bottom: 50px;
+
+    &__box {
+        margin-bottom: 50px;
+
+        @include m($md) {
+            margin-bottom: 35px;
+        }
+    }
+
+    &__list {
+        counter-reset: item;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        @include m($lg) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include m($md) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__item {
+        position: relative;
+        padding: 30px;
+
+        @include hl {
+            padding: 20px;
+        }
+
+        @include m($sm) {
+            padding: 20px;
+        }
+
+        @include m($lg) {
+            &::after {
+                display: none;
+            }
+        }
+
+        svg {
+            fill: $blue-100;
+        }
+    }
+
+    &__sub-item {
+        color: $black-200;
+        position: relative;
+        padding-left: 16px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            margin-right: 16px;
+            background-color: $blue-100;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+        }
+
+
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        span {
+            color: $gray-100;
+            display: block;
+        }
+    }
+
+    &__link {
+        font-weight: 500;
+        color: $black-200;
+    }
+}

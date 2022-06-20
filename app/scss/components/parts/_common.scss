@@ -139,3 +139,15 @@ a {
 
     }
 }
+
+.oval {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        transform: rotate(40.88deg);
+        background-color: rgba(89, 120, 169, 0.1);
+        border-radius: 30px;
+    }
+}

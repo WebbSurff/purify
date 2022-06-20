@@ -3,6 +3,11 @@
     background-color: #F9FAFF;
     text-align: center;
 
+    &--transparent {
+        background-color: transparent;
+        padding: 0;
+    }
+
     @include m($md) {
         padding: 40px 0;
     }
@@ -109,11 +114,16 @@
     &__more {
         display: inline-block;
         color: $blue-900;
-        border-bottom: 1px solid $blue-900;
+        border-bottom: 2px solid $blue-900;
         transition: border-color 0.3s;
+        border-radius: 0;
 
         &:hover {
             border-color: transparent;
+        }
+
+        &:focus {
+            border-radius: 30px;
         }
     }
 }

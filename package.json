@@ -30,7 +30,9 @@
   "dependencies": {
     "@ohepworthbell/quantityinput": "^0.2.0",
     "animate.css": "^4.1.1",
+    "inputmask": "^5.0.7",
     "jquery.nice-number": "^2.1.0",
+    "just-validate": "^3.8.1",
     "numscrubberjs": "^1.0.2"
   }
 }

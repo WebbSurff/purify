@@ -29,6 +29,30 @@
             width: 100%;
         }
 
+        &--inner {
+            position: static;
+
+            &::after {
+                width: 0;
+                height: 0;
+            }
+
+            p {
+                position: relative;
+                display: inline-block;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 7px;
+                    left: 0;
+                    background-color: rgba(89, 120, 169, 0.3);
+                    height: 9px;
+                    width: 100%;
+                }
+            }
+        }
+
         @include hl {
             font-size: 28px;
         }
@@ -42,5 +66,6 @@
         font-size: 20px;
         line-height: 1.5;
         color: $black-900;
+        @include line-clamp (8);
     }
 }

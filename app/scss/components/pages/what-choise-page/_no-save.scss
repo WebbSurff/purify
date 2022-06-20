@@ -1,0 +1,220 @@
+.no-save {
+    &__wrapper {
+        padding-bottom: 50px;
+        border-bottom: 1px solid #E5E5E7;
+        margin-bottom: 50px;
+
+        @include m($md) {
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+
+        @include m($lg) {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+
+    &__box {
+        margin-right: 34px;
+
+        @include m($lg) {
+            margin-right: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 40px;
+
+        @include m($md) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        margin-bottom: 30px;
+        color: $black-200;
+        display: inline-flex;
+        align-items: center;
+
+        &::before {
+            content: '';
+            height: 10px;
+            width: 10px;
+            flex: 0 0 10px;
+            border-radius: 50%;
+            margin-right: 10px;
+            background-color: $blue-900;
+        }
+
+        @include m($sm) {
+            font-size: 20px;
+        }
+    }
+
+    &__text {
+        font-size: 15px;
+        letter-spacing: 0.02em;
+        display: inline-block;
+    }
+
+    &__video {
+        height: 300px;
+        flex: 0 0 447px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @include m($lg) {
+            height: 250px;
+            margin-bottom: 20px;
+        }
+    }
+
+}
+
+.take-order {
+
+    &__wrap {
+        position: relative;
+    }
+
+    &__bg {
+        object-fit: cover;
+        position: absolute;
+        left: 0;
+        border-radius: 0px 50px;
+        top: 0;
+        width: calc(445/1140*100%);
+
+        @include m($lg) {
+            width: 47.035088%;
+            height: 63%;
+        }
+
+        @include m($md) {
+            display: none;
+        }
+
+        @include hl {
+            display: none;
+        }
+    }
+
+    &__product {
+        margin-left: auto;
+        max-width: calc(630/1140*100%);
+
+        @include m($lg) {
+            max-width: 40%;
+        }
+
+        @include hl {
+            max-width: 100%;
+            margin-left: 0;
+        }
+
+        @include m($md) {
+            max-width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    &__box {
+        display: flex;
+
+        @include m($lg) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        @include m($md) {
+            justify-content: center;
+            flex-direction: row;
+        }
+
+        @include hl {
+            justify-content: center;
+            flex-direction: row;
+        }
+
+        @include m($sm) {
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        display: inline-flex;
+        flex-direction: column;
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 36px;
+        font-weight: 400;
+        font-size: 15px;
+        color: $black-200;
+
+        &::before {
+            content: '';
+            position: absolute;
+            flex: 0 0 10px;
+            width: 10px;
+            height: 10px;
+            background-color: $blue-900;
+            left: 0;
+            top: 5px;
+            border-radius: 50%;
+        }
+
+        span {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: 0.02em;
+
+            @include m($sm) {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__link-img {
+        margin-right: 30px;
+        flex: 0 0 250px;
+
+        @include m($md) {
+            flex: 0 0 auto;
+        }
+    }
+
+    &__img {
+        object-fit: cover;
+
+        @include m($lg) {
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 500;
+        font-size: 16px;
+        color: $black-200;
+        max-width: 350px;
+        align-self: flex-start;
+    }
+
+    .product-catalog__btn {
+        align-self: flex-start;
+    }
+
+}

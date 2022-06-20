@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+    <link rel="icon" href="images/favicon.svg">
     <link rel="stylesheet" href="css/index.min.css">
     <title>Фармацевтическая компания Purify</title>
 </head>
@@ -53,33 +55,33 @@
     <div class="header__bot">
         <div class="container">
             <nav class="header__nav">
-                <a class="header__logo int" href="#">
+                <a class="header__logo int" href="header.html">
                     <img class="header__logo-img" src="images/header/logo.svg" alt="logo" width="98" height="28">
                 </a>
                 <div class="header__menu menu">
                     <ul class="menu__list">
                         <li class="menu__item">
-                            <a class="menu__link int" href="#">
-                                Каталог
+                            <a class="menu__link int" href="index.html">
+                                Главная
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link int" href="#">
+                            <a class="menu__link int" href="delivery.html">
                                 Доставка
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link int" href="#">
+                            <a class="menu__link int" href="wholesale-details.html">
                                 ОПТ
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link int" href="#">
+                            <a class="menu__link int" href="contact.html">
                                 Контакты
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link int" href="#">
+                            <a class="menu__link int" href="what-choise.html">
                                 Что защищает?
                             </a>
                         </li>
@@ -275,7 +277,7 @@
                     <use xlink:href="images/sprite.svg#close"></use>
                 </svg>
             </button>
-            <form class="popup__form form-contact" action="#">
+            <form class="popup__form form-contact form-contact--header" method="POST" enctype="multipart/form-data">
                 <h2 class="form-contact__title section__title">
                     Закажите звонок
                 </h2>
@@ -283,11 +285,11 @@
                     Прямо сейчас
                 </span>
                 <label class="sr-only" for="name">ваше имя</label>
-                <input class="form-contact__input form-contact__input--name int" type="text" id="name" name="enter-name"
-                    placeholder="Ваше имя">
+                <input class=" form-contact__input form-contact__input--name int  input-name--header" type="text"
+                    id="name" name="enter-name" placeholder="Ваше имя">
                 <label class="sr-only" for="phone">ваш телефон</label>
-                <input class="form-contact__input form-contact__input--phone int" type="tel" id="phone"
-                    name="enter-phone" placeholder="Ваш телефон">
+                <input class="form-contact__input form-contact__input--phone int input-tel--header" type="tel"
+                    id="phone" name="enter-phone" placeholder="Ваш телефон">
                 <button class="form-contact__btn btn int" type="submit">
                     Заказать
                 </button>
@@ -301,15 +303,15 @@
                     <div class="container">
                         <div class="hero__wrap">
                             <div class="hero__box">
-                                <h1 class="hero__title section__title">
-                                    Фармацевтическая компания Purify
+                                <h1 class="hero__title section__title section__title--inner">
+                                    Фармацевтическая <p>компания Purify</p>
                                 </h1>
                                 <p class="hero__text section__text">
                                     В наличии с доставкой за 2 часа и оплатой
                                     по факту получения
                                 </p>
                                 <ul class="hero__list">
-                                    <li class="hero__item info-hero info-hero--delivery">
+                                    <li class="hero__item info-hero info-hero--delivery oval">
                                         <div class="info-hero__wrap">
                                             <h2 class="info-hero__title">
                                                 Доставка собственным
@@ -320,7 +322,7 @@
                                             </p>
                                         </div>
                                     </li>
-                                    <li class="hero__item info-hero  info-hero--coin">
+                                    <li class="hero__item info-hero  info-hero--coin oval">
                                         <div class="info-hero__wrap">
                                             <h2 class="info-hero__title">
                                                 Гибкая система
@@ -332,7 +334,7 @@
                                             </p>
                                         </div>
                                     </li>
-                                    <li class="hero__item info-hero info-hero--original">
+                                    <li class="hero__item info-hero info-hero--original oval">
                                         <div class="info-hero__wrap">
                                             <h2 class="info-hero__title">
                                                 Оригинальная продукция
@@ -343,7 +345,7 @@
                                             </p>
                                         </div>
                                     </li>
-                                    <li class="hero__item info-hero info-hero--security">
+                                    <li class="hero__item info-hero info-hero--security oval">
                                         <div class="info-hero__wrap">
                                             <h2 class="info-hero__title">
                                                 Защита до 99%
@@ -471,9 +473,11 @@
                 <section class="delivery section">
                     <div class="container">
                         <div class="delivery__box section__box">
-                            <h2 class="delivery__title section__title">
+                            <h2 class="delivery__title section__title section__title--inner">
                                 Бесконтактная доставка
-                                с оплатой по факту
+                                <p>
+                                    с оплатой по факту
+                                </p>
                             </h2>
                             <p class="delivery__text section__text">
                                 Гарантия лучшей цены
@@ -969,7 +973,7 @@
                             <div class="review__swiper swiper">
                                 <ul class="review__list swiper-wrapper">
                                     <li class="review__item swiper-slide">
-                                        <a data-fancybox="" class="review__link play-video int"
+                                        <a data-fancybox class="review__link play-video int"
                                             href="https://youtu.be/N5XnjuPTkgU"
                                             style="background-image: url('images/review/1.jpg');">
                                             <svg class="review__play play-video__play" width="20px" height="20px">
@@ -1101,7 +1105,7 @@
                                     так же работаем с НДС и без НДС. Для согласования скидок обратитесь к нашим
                                     менеджерам
                                 </p>
-                                <a class="wholesale__btn btn int" href="#">
+                                <a class="wholesale__btn btn int" href="wholesale-details.html">
                                     Заказать
                                 </a>
                             </div>

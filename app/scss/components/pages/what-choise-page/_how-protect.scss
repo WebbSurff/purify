@@ -1,0 +1,88 @@
+.how-protect {
+    background-color: transparent;
+    margin-bottom: 0;
+    padding: 0;
+
+    .benefit__wrap {
+        margin-bottom: 0;
+        align-items: center;
+
+        &--reverse {
+            .how-protect__content {
+                margin-right: 0;
+                margin-left: 35px;
+
+                @include m($md) {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    &__box {
+        margin-bottom: 53px;
+
+        @include m($md) {
+            text-align: left;
+        }
+    }
+
+    &__title {
+        @include m($md) {
+            display: inline;
+        }
+    }
+
+    &__wrapper {
+        padding-bottom: 50px;
+        border-bottom: 1px solid #E5E5E7;
+        margin-bottom: 50px;
+    }
+
+    &__content {
+        margin-right: 35px;
+
+        @include m($md) {
+            margin: 0;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: 0.02em;
+        position: relative;
+        margin-bottom: 30px;
+        padding-left: 20px;
+        color: $black-200;
+
+        @include m($sm) {
+            font-size: 20px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            flex: 0 0 10px;
+            width: 10px;
+            height: 10px;
+            background-color: $blue-900;
+            left: 0;
+            top: 5px;
+            border-radius: 50%;
+        }
+
+    }
+
+    &__info {
+
+        p {
+            font-size: 15px;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

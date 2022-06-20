@@ -61,7 +61,6 @@
             width: 21px;
             height: 28px;
             background-repeat: no-repeat;
-            background-size: 21px 28px;
             background-image: url('../images/benefit/checkbox.svg');
             background-position: center;
         }
@@ -83,7 +82,7 @@
     &__video {
         height: 300px;
         display: flex;
-        flex: 0 1 40%;
+        flex: 0 0 40%;
         background-color: #C4C4C4;
         background-repeat: no-repeat;
         background-position: center;
@@ -92,6 +91,7 @@
         @include m($md) {
             flex: auto;
             height: 250px;
+            width: 100%;
             margin-bottom: 25px;
         }
 

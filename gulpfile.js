@@ -52,6 +52,8 @@ function scripts() {
         'node_modules/jquery/dist/jquery.js',
         'node_modules/jquery.nice-number/dist/jquery.nice-number.js',
         'node_modules/swiper/swiper-bundle.js',
+        'node_modules/inputmask/dist/inputmask.js',
+        'node_modules/just-validate/dist/just-validate.production.min.js',
         'node_modules/mixitup/dist/mixitup.js',
         'app/js/main.js'
     ])

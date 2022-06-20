@@ -1,0 +1,163 @@
+@@include('../components/head.html', {
+"title": "Контактные данные",
+"css": "contact",
+})
+
+<body>
+    <div class="wrapper">
+
+        <div class="content">
+
+            @@include('../components/header.html')
+
+            <main class="main">
+                <section class="contact-date section">
+                    <div class="container ">
+                        <div class="contact-date__box section__box">
+                            <h1 class="contact-date__title section__title">
+                                Контактные данные
+                            </h1>
+                        </div>
+                        <h2 class="sr-only">
+                            Данные двух предприятий и личные данные топ-менеджеров
+                        </h2>
+                        <ul class="contact-date__list">
+                            <li class="contact-date__item numbered-item">
+                                <h3 class=" address-footer__subtitle">
+                                    <svg width="16" height="16">
+                                        <use xlink:href="images/sprite.svg#local"></use>
+                                    </svg>
+                                    <span>
+                                        Наш адрес
+                                    </span>
+                                </h3>
+                                <p class="address-footer__date">
+                                    <span>
+                                        Минск, бульвар Мулявина, 6
+                                    </span>
+                                </p>
+                                <h3 class="address-footer__subtitle">
+                                    <svg width="16" height="16">
+                                        <use xlink:href="images/sprite.svg#phone"></use>
+                                    </svg>
+                                    <span>
+                                        Наш телефон
+                                    </span>
+                                </h3>
+                                <a class="address-footer__link int" href="tel:11234568899">
+                                    +1 123 456 88 99
+                                </a>
+                                <h3 class="address-footer__subtitle">
+                                    <svg width="16" height="16">
+                                        <use xlink:href="images/sprite.svg#clock"></use>
+                                    </svg>
+                                    <span>
+                                        График работы
+                                    </span>
+                                </h3>
+                                <p class="address-footer__date">
+                                    <span>
+                                        Ежедневно с 10:00 до 20:00
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="contact-date__item contact-date__item--selfdelivery numbered-item">
+                                <h3 class="address-footer__subtitle">
+                                    <svg width="16" height="16">
+                                        <use xlink:href="images/sprite.svg#local"></use>
+                                    </svg>
+                                    <span>
+                                        Наш адрес
+                                    </span>
+                                </h3>
+                                <p class="address-footer__date">
+                                    <span>
+                                        Брест, переулок Фортечный, 12
+                                    </span>
+                                </p>
+                                <h3 class="address-footer__subtitle">
+                                    <svg width="16" height="16">
+                                        <use xlink:href="images/sprite.svg#phone"></use>
+                                    </svg>
+                                    <span>
+                                        Наш телефон
+                                    </span>
+                                </h3>
+                                <a class="address-footer__link int" href="tel:11234568899">
+                                    +1 123 456 88 01
+                                </a>
+                                <h3 class="address-footer__subtitle">
+                                    <svg width="16" height="16">
+                                        <use xlink:href="images/sprite.svg#clock"></use>
+                                    </svg>
+                                    <span>
+                                        График работы
+                                    </span>
+                                </h3>
+                                <p class="address-footer__date">
+                                    <span>
+                                        Ежедневно с 10:00 до 20:00
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="contact-date__item numbered-item">
+                                <h3 class="address-footer__subtitle">
+                                    <svg width="16" height="16">
+                                        <use xlink:href="images/sprite.svg#mail"></use>
+                                    </svg>
+                                    <span>
+                                        Емейл адреса для связи:
+                                    </span>
+                                </h3>
+                                <ul class="contact-date__sub-list">
+                                    <li class="contact-date__sub-item">
+                                        Отдел продаж:
+                                        <span>
+                                            Олег - <a class="contact-date__link" href="mailto:o.mail@purify.com">
+                                                o.mail@purify.com
+                                            </a>
+                                        </span>
+                                    </li>
+                                    <li class="contact-date__sub-item">
+                                        Руководитель отдела продаж:
+                                        <span>
+                                            Марк - <a class="contact-date__link" href="mailto:m.mail@purify.com">
+                                                m.mail@purify.com
+                                            </a>
+                                        </span>
+                                    </li>
+                                    <li class="contact-date__sub-item">
+                                        Логистика:
+                                        <span>
+                                            Алексей - <a class="contact-date__link" href="mailto:a.mail@purify.com">
+                                                a.mail@purify.com
+                                            </a>
+                                        </span>
+                                    </li>
+                                    <li class="contact-date__sub-item">
+                                        Бухгалтерия:
+                                        <span>
+                                            Роберт - <a class="contact-date__link" href="mailto:a.mail@purify.com">
+                                                r.mail@purify.com
+                                            </a>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                @@include('../components/call-back.html')
+
+            </main>
+
+        </div>
+
+        @@include('../components/footer.html')
+
+    </div>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

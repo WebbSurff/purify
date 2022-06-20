@@ -1,8 +1,8 @@
 .header {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 
     @include m($md) {
-        margin-bottom: 35px;
+        margin-bottom: 85px;
     }
 
     @include hl {
@@ -73,6 +73,19 @@
     &__bot {
         border-bottom: 1px solid #DDDDDD;
         position: relative;
+        position: fixed;
+        left: 0;
+        top: 55px;
+        right: 0;
+        z-index: 10;
+        transition: top 0.3s, background-color 0.3s;
+
+        &.active {
+            top: 0;
+            background-color: #f9faff;
+            transition: top 0.3s, background-color 0.3s;
+
+        }
     }
 
     &__nav {
